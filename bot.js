@@ -1,7 +1,7 @@
 var Discord = require('discord.js');
 var client = new Discord.Client();
 
-client.user.setPresence({ game: { name: 'bit.ly/kopusDC', type: 0 } });
+//client.user.setPresence({ game: { name: 'bit.ly/kopusDC', type: 0 } });
 
 client.on('message', message => {
 	if (message.content === '!komutlar') {
