@@ -1,17 +1,30 @@
-var Discord = require('discord.js');
+const { Discord, RichEmbed } = require('discord.js');
 var client = new Discord.Client();
-
-//client.user.setPresence({ game: { name: 'bit.ly/kopusDC', type: 0 } });
 
 client.on('message', message => {
 	if (message.content === '!komutlar') {
-		message.channel.send(`Sunucumuzda kullanabildiğin komutları aşağıda listeledik! :upside_down:\n\n**»** Arkadaşınla ortak video izleyebilmek için: __http://bit.ly/kopusw2gether__\n\n**»** Sunucu anlık davet bağlantısı: __http://bit.ly/kopusDC__\n\n**»** Müzik botunu kanalına çağırmak için:\n\n__!!!play -müzik bağlantısı veya isim-__\n__!!!c -seçenek-__`);
+		const embed = new Discord.RichEmbed()
+		.setColor('RANDOM') 
+            .setTimestamp()
+            .setAuthor(message.author.username, message.author.avatarURL)
+            .setThumbnail(message.guild.iconURL)
+			.addField("**Sık Kullanılan Bağlantılar**", "\n**»** Arkadaşınla ortak video izleyebilmek için:\n__http://bit.ly/kopusw2gether__⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n\n**»** Sunucu anlık davet bağlantısı:\n__http://bit.ly/kopusDC__\n\n**»** Müzik botunu kanalına çağırmak için:\n__!!!play  -müzik bağlantısı veya isim-__")
+
+		message.channel.send(embed);
 	}
 	if (message.content === 'köpüş') {
 		if (message.channel.id === `428540697419972609`) {
-			message.member.removeRole(`428536643042017284`);
-			message.delete(120)
-			message.author.send('Köpüş sunucusunun topluluk kurallarını kabul ettiğin için teşekkür ederiz.\nArtık sunucudaki diğer sesli odalara ve metin kanallarına erişebilirsin.\n\nSık Kullanılan Bağlantılar:\n\n**»** Arkadaşınla ortak video izleyebilmek için: __http://bit.ly/kopusw2gether__\n\n**»** Sunucu anlık davet bağlantısı: __http://bit.ly/kopusDC__\n\n**»** Müzik botunu kanalına çağırmak için:\n\n__!!!play -müzik bağlantısı veya isim-__\n__!!!c -seçenek-__')
+		const embed = new RichEmbed()
+			.setColor('RANDOM')
+			.setTimestamp()
+			.setAuthor(msg.author.username, msg.author.avatarURL)
+			.setThumbnail(msg.guild.iconURL)
+			.addField("Katıldığın için teşekkür ederiz!", "Köpüş sunucusunun topluluk kurallarını kabul ettiğin için teşekkür ederiz.\nArtık sunucudaki diğer sesli odalara ve metin kanallarına erişebilirsin.\n")
+			.addField("Sık kullanılan bağlantılar", "**»** Arkadaşınla ortak video izleyebilmek için: __http://bit.ly/kopusw2gether__ \n**»** Sunucu anlık davet bağlantısı: __http://bit.ly/kopusDC__ \n**»** Müzik botunu kanalına çağırmak için: __!!!play  -müzik bağlantısı veya isim-__")
+            msg.member.removeRole(`428536643042017284`);
+            msg.delete(120)
+			const messages = [];
+			messages.push(msg.author.send({embed: embed}));
 		}
 	}
 });
