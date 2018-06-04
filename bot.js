@@ -21,9 +21,11 @@ client.on('message', message => {
 		if (message.channel.id === `452575245052674058`) {
 			if(message.member.roles.has(`453186864422191149`)) {
 				message.member.removeRole(`453186864422191149`);
+				message.delete(120)
 				message.author.send('Artık **lol_odası** kanalını göremeyeceksiniz. Görebilmek için tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.')
 			} else {
 				message.member.addRole(`453186864422191149`);
+				message.delete(120)
 				message.author.send('Artık **lol_odası** kanalını görebilirsin. Eğer bu kanalı görmek istemezsen tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.')
 			}
 		}
