@@ -26,6 +26,8 @@ client.on('message', message => {
 				message.member.addRole(`453186864422191149`);
 				message.author.send('Artık **lol_odası** kanalını göremeyeceksiniz. Görebilmek için tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.')
 			}
+		}
+	}
 });
 
 client.on('guildMemberAdd', async member => {
