@@ -75,6 +75,7 @@ client.on('message', message => {
 	}
 	if (message.content === 'istatistik') {
 		if (message.channel.id === `453190732153356291`) {
+			var prefix = (file.prefix[message.guild.id] == undefined) ? file.prefix["default"] : file.prefix[message.guild.id];
 			var args = message.content.substring(prefix.length).split(" ");
 			var UR_L = "http://csgo.tracker.network/profile/" + args[1];
 			if(!args[1]){
