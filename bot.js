@@ -73,48 +73,6 @@ client.on('message', message => {
 			}
 		}
 	}
-	if (message.content === 'istatistik') {
-		if (message.channel.id === `453190732153356291`) {
-			var prefix = (file.prefix[message.guild.id] == undefined) ? file.prefix["default"] : file.prefix[message.guild.id];
-			var args = message.content.substring(prefix.length).split(" ");
-			var UR_L = "http://csgo.tracker.network/profile/" + args[1];
-			if(!args[1]){
-				return message.channel.reply("\nProfil linkini doğru yazmalısın, örnek: __ruddeTR__ veya __76561198098683353__");
-			}
-			request(UR_L, function(err, resp, body){
-				$ = cheerio.load(body);
-				var KD = getStatData(0, message, $);
-				var WIN = getStatData(1, message, $);
-				var HS = getStatData(4, message, $);
-				var MONEY = getStatData(5, message, $);
-				var SCORE = getStatData(6, message, $);
-				var KILLS = getStatData(7, message, $);
-				var DEATHS = getStatData(8, message, $);
-				var MVP = getStatData(9, message, $);
-				var BS = getStatData(13, message, $);
-				var BD = getStatData(14, message, $);
-				var HR = getStatData(15, message, $);
-				var STAT = new Discord.RichEmbed()
-				.setTitle("__***Genel İstatistikler***__")
-				.setURL(UR_L)
-				.addField("------------------------------------",
-					"KD oranı: " + "__**" + KD + "**__" + "\n" +
-					"Win oranı: " + "__**" + WIN + "**__" + "\n" +
-					"Alınan EDO sayısı: " + "__**" + MVP + "**__" + "\n" +
-					"Toplam skor sayısı: " + "__**" + SCORE + "**__" + "\n" +
-					"Toplam öldürme sayısı: " + "__**" + KILLS + "**__" + "\n" +
-					"Toplam ölüm sayısı: " + "__**" + DEATHS + "**__" + "\n" +
-					"Toplam bomba yerleştirme sayısı: " + "__**" + BS + "**__" + "\n" +
-					"Toplam bomba çözme sayısı: " + "__**" + BD + "**__" + "\n" +
-					"Toplam headshot sayısı: " + "__**" + HS + "**__" + "\n" +
-					"Toplam kazanılan para: " + "__**" + MONEY + "**__" + "\n" +
-					"Toplam kurtarılan rehine: " + "__**" + HR + "**__" + "\n" +
-				"------------------------------------\n", true)
-				.setColor("0x#FF0000")
-				message.channel.send(STAT);
-			});
-		}
-	}
 });
 client.on('guildMemberAdd', async member => {
         member.addRole(`428536643042017284`);
