@@ -109,18 +109,18 @@ client.on('message', message => {
 		}
 		request(UR_L,function(err,resp,body){
 			$=cheerio.load(body);
-			varKD=getStatData(0,message,$);
-			varWIN=getStatData(1,message,$);
-			varHS=getStatData(4,message,$);
-			varMONEY=getStatData(5,message,$);
-			varSCORE=getStatData(6,message,$);
-			varKILLS=getStatData(7,message,$);
-			varDEATHS=getStatData(8,message,$);
-			varMVP=getStatData(9,message,$);
-			varBS=getStatData(13,message,$);
-			varBD=getStatData(14,message,$);
-			varHR=getStatData(15,message,$);
-			varSTAT=newDiscord.RichEmbed()
+			var KD = getStatData(0,message,$);
+			var WIN = getStatData(1,message,$);
+			var HS = getStatData(4,message,$);
+			var MONEY = getStatData(5,message,$);
+			var SCORE = getStatData(6,message,$);
+			var KILLS = getStatData(7,message,$);
+			var DEATHS = getStatData(8,message,$);
+			var MVP = getStatData(9,message,$);
+			var BS = getStatData(13,message,$);
+			var BD = getStatData(14,message,$);
+			var HR = getStatData(15,message,$);
+			var STAT = newDiscord.RichEmbed()
 			.setTitle("__***CSGOStats***__")
 			.setURL(UR_L)
 			.addField("------------------------------------",
