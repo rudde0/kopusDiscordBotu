@@ -1,12 +1,12 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const {PubgAPI, PubgAPIErrors, REGION, SEASON, MATCH} = require('pubg-api-redis');
+/*const {PubgAPI, PubgAPIErrors, REGION, SEASON, MATCH} = require('pubg-api-redis');
 const Gamedig = require('gamedig');
 const prefix = '!';
 
 const api = new PubgAPI({
   apikey: 'a9be1113-8c99-4fe4-beb4-ebfc61b1e9b6',
-});
+});*/
 
 client.on('ready', () => {
 	console.log('Köpüş bot, etkinleştirildi!')
@@ -94,7 +94,7 @@ client.on('message', message => {
 			}
 		}
 	}
-	if (command === "pubg") {
+	/*if (command === "pubg") {
 		var playerVar = args.slice(0, 1).join(' ');
 		if ( !playerVar || playerVar < 2 ) {
 			message.channel.send('Error! make sure you add a player name.\n' + '\nExample: `!pubg AHappyTeddyBears`');
@@ -186,7 +186,7 @@ client.on('message', message => {
 		.catch((err) => {
 			message.channel.send('```' + 'Error: ' + playerVar + ' not found for season 4 or server is busy. Try again later' + '```');
 		});
-	}
+	}*/
 });
 client.on('guildMemberAdd', async member => {
         member.addRole(`428536643042017284`);
