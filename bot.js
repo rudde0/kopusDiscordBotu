@@ -105,7 +105,7 @@ client.on('message', message => {
 	if (message.content === 'istatistik') {
 		varUR_L="http://csgo.tracker.network/profile/"+args[1];
 		if(!args[1]){
-			returnmessage.channel.send("PleaseEnteravalidSTEAMID64orcustomurl");
+			return message.channel.send("PleaseEnteravalidSTEAMID64orcustomurl");
 		}
 		request(UR_L,function(err,resp,body){
 			$=cheerio.load(body);
