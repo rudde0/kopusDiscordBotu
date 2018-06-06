@@ -103,10 +103,10 @@ client.on('message', message => {
 		}
 	}
 	if (message.content === '!istatistik') {
-		var UR_L = "http://csgo.tracker.network/profile/"+args[1];
-		if(!args[1]){
+		var UR_L = "http://csgo.tracker.network/profile/ruddeTR";//+args[1];
+		/*if(!args[1]){
 			return message.channel.send("PleaseEnteravalidSTEAMID64orcustomurl");
-		}
+		}*/
 		request(UR_L,function(err,resp,body){
 			$=cheerio.load(body);
 			var KD = getStatData(0,message,$);
