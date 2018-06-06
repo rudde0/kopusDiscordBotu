@@ -73,6 +73,17 @@ client.on('message', message => {
 			}
 		}
 	}
+	if (message.content === 'diğer') {
+		if (message.channel.id === `453936138986717199`) {
+			if(message.member.roles.has(`453935578824835103`)) {
+				message.member.removeRole(`453935578824835103`);
+				message.channel.reply('\nArtık **oyun_diğer** kanalını göremeyeceksiniz. Görebilmek için tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.')
+			} else {
+				message.member.addRole(`453935578824835103`);
+				message.channel.reply('\nArtık **oyun_diğer** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.')
+			}
+		}
+	}
 });
 client.on('guildMemberAdd', async member => {
         member.addRole(`428536643042017284`);
