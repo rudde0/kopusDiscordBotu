@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const {PubgAPI, PubgAPIErrors, REGION, SEASON, MATCH} = require('pubg-api-redis');
 const Gamedig = require('gamedig');
+const prefix = '!';
 
 const api = new PubgAPI({
   apikey: 'a9be1113-8c99-4fe4-beb4-ebfc61b1e9b6',
