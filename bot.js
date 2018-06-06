@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const {PubgAPI, PubgAPIErrors, REGION, SEASON, MATCH} = require('pubg-api-redis');
+const Gamedig = require('gamedig');
 
 client.on('ready', () => {
 	console.log('Köpüş bot, etkinleştirildi!')
@@ -7,6 +9,8 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
+	const args = message.content.slice(prefix.length).trim().split(/ +/g);
+	const command = args.shift().toLowerCase();
 	if (message.content === 'komutlar') {
 		message.channel.send(`Sunucumuzda kullanabildiğin komutları aşağıda listeledik! :upside_down:\n\n**»** Arkadaşınla ortak video izleyebilmek için: __http://bit.ly/kopusw2gether__\n\n**»** Sunucu anlık davet bağlantısı: __http://bit.ly/kopusDC__\n\n**»** Müzik botunu kanalına çağırmak için:\n\n__!!!play -müzik bağlantısı veya isim-__\n__!!!c -seçenek-__\n\n**»** Oynadığın oyunla ilgili sohbet kanalına erişim için sohbete şunu yazabilirsin:\n__lol__, __cs__, __pubg__\n\n**»** Sıkça sorulara bakmak için sohbete __sss__ yazabilirsin.`);
 	}
@@ -84,6 +88,99 @@ client.on('message', message => {
 				message.channel.reply('\nArtık **oyun_diğer** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.')
 			}
 		}
+	}
+	if (command === "pubg") {
+		var playerVar = args.slice(0, 1).join(' ');
+		if ( !playerVar || playerVar < 2 ) {
+			message.channel.send('Error! make sure you add a player name.\n' + '\nExample: `!pubg AHappyTeddyBears`');
+		} else
+			api.getProfileByNickname(playerVar)
+		.then((profile) => {
+			const data = profile.content;
+			const stats = profile.getStats({
+				region: REGION.ALL,
+				season: SEASON.EA2017pre4,
+				match: MATCH.SOLO
+			});
+			message.channel.send('```' + stats.playerName + "'s SOLO Stats" +
+			'\nPlayer Rank: ' + stats.rankData.rating +
+			'\nRounds Played: ' + stats.performance.roundsPlayed +
+			'\nTotal Kills: ' + stats.combat.kills +
+			'\nK/D Ratio: ' + stats.performance.killDeathRatio +
+			'\nHeadShot Kills: ' + stats.combat.headshotKills +
+			'\nHeadShot Kill Ratio: ' + stats.combat.headshotKillRatio + '%' +
+			'\nWins: ' + stats.performance.wins +
+			'\nWin Ratio: ' + stats.performance.winRatio + '%' +
+			'\nLosses: ' + stats.performance.losses +
+			'\nTop 10s: ' + stats.performance.top10s +
+			'\nTop 10 Ratio: ' + stats.performance.top10Ratio + '%' +
+			'```');
+		})
+		.catch((err) => {
+			message.channel.send('```' + 'Error: ' + playerVar + ' not found for season 4 or server is busy. Try again later' + '```');
+		});
+	}
+	if (command === "pubgduo") {
+		var playerVar = args.slice(0, 1).join(' ');
+		if ( !playerVar || playerVar < 2 ) {
+			message.channel.send('Error! make sure you add a player name.\n' + '\nExample: `!pubg AHappyTeddyBears`');
+		} else
+			api.getProfileByNickname(playerVar)
+			.then((profile) => {
+			const data = profile.content;
+			const stats = profile.getStats({
+			region: REGION.ALL,
+			season: SEASON.EA2017pre4,
+			match: MATCH.DUO
+		});
+		message.channel.send('```' + stats.playerName + "'s DUO Stats" +
+		'\nPlayer Rank: ' + stats.rankData.rating +
+		'\nRounds Played: ' + stats.performance.roundsPlayed +
+		'\nTotal Kills: ' + stats.combat.kills +
+		'\nK/D Ratio: ' + stats.performance.killDeathRatio +
+		'\nHeadShot Kills: ' + stats.combat.headshotKills +
+		'\nHeadShot Kill Ratio: ' + stats.combat.headshotKillRatio + '%' +
+		'\nWins: ' + stats.performance.wins +
+		'\nWin Ratio: ' + stats.performance.winRatio + '%' +
+		'\nLosses: ' + stats.performance.losses +
+		'\nTop 10s: ' + stats.performance.top10s +
+		'\nTop 10 Ratio: ' + stats.performance.top10Ratio + '%' +
+		'```');
+		})
+		.catch((err) => {
+			message.channel.send('```' + 'Error: ' + playerVar + ' not found for season 4 or server is busy. Try again later' + '```');
+		});
+	}
+	if (command === "pubgsquad") {
+		var playerVar = args.slice(0, 1).join(' ');
+		if ( !playerVar || playerVar < 2 ) {
+			message.channel.send('Error! make sure you add a player name.\n' + '\nExample: `!pubg AHappyTeddyBears`');
+		} else
+			api.getProfileByNickname(playerVar)
+		.then((profile) => {
+			const data = profile.content;
+			const stats = profile.getStats({
+				region: REGION.ALL,
+				season: SEASON.EA2017pre4,
+				match: MATCH.SQUAD
+			});
+			message.channel.send('```' + stats.playerName + "'s SQUAD Stats" +
+			'\nPlayer Rank: ' + stats.rankData.rating +
+			'\nRounds Played: ' + stats.performance.roundsPlayed +
+			'\nTotal Kills: ' + stats.combat.kills +
+			'\nK/D Ratio: ' + stats.performance.killDeathRatio +
+			'\nHeadShot Kills: ' + stats.combat.headshotKills +
+			'\nHeadShot Kill Ratio: ' + stats.combat.headshotKillRatio + '%' +
+			'\nWins: ' + stats.performance.wins +
+			'\nWin Ratio: ' + stats.performance.winRatio + '%' +
+			'\nLosses: ' + stats.performance.losses +
+			'\nTop 10s: ' + stats.performance.top10s +
+			'\nTop 10 Ratio: ' + stats.performance.top10Ratio + '%' +
+			'```');
+			})
+		.catch((err) => {
+			message.channel.send('```' + 'Error: ' + playerVar + ' not found for season 4 or server is busy. Try again later' + '```');
+		});
 	}
 });
 client.on('guildMemberAdd', async member => {
