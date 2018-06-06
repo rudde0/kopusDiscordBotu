@@ -103,7 +103,7 @@ client.on('message', message => {
 		}
 	}
 	if (message.content === 'istatistik') {
-		varUR_L="http://csgo.tracker.network/profile/"+args[1];
+		var UR_L = "http://csgo.tracker.network/profile/"+args[1];
 		if(!args[1]){
 			return message.channel.send("PleaseEnteravalidSTEAMID64orcustomurl");
 		}
