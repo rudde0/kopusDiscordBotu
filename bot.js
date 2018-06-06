@@ -1,17 +1,24 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-/*const {PubgAPI, PubgAPIErrors, REGION, SEASON, MATCH} = require('pubg-api-redis');
-const Gamedig = require('gamedig');
-const prefix = '!';
-
-const api = new PubgAPI({
-  apikey: 'a9be1113-8c99-4fe4-beb4-ebfc61b1e9b6',
-});*/
 
 client.on('ready', () => {
 	console.log('Köpüş bot, etkinleştirildi!')
 	client.user.setPresence({ game: { name: 'bit.ly/kopusDC', type: 0 } });
 });
+
+function getStatData(location, message , $){
+	var selector = $('.stats-stat .value').eq(location).text();
+	var stat_array = $.parseHTML(selector);
+	var stat = 0;
+	if(stat_array == null || stat_array.lengh == 0){
+		message.channel.send("Invalid User");
+		return " ";
+	} else {
+		stat = stat_array[0].data;
+}
+
+  return stat;
+}
 
 client.on('message', message => {
 	const args = message.content.slice(prefix.length).trim().split(/ +/g);
@@ -94,100 +101,46 @@ client.on('message', message => {
 			}
 		}
 	}
-	/*if (command === "pubg") {
-		var playerVar = args.slice(0, 1).join(' ');
-		if ( !playerVar || playerVar < 2 ) {
-			message.channel.send('Error! make sure you add a player name.\n' + '\nExample: `!pubg AHappyTeddyBears`');
-		} else
-			api.getProfileByNickname(playerVar)
-		.then((profile) => {
-			const data = profile.content;
-			const stats = profile.getStats({
-				region: REGION.ALL,
-				season: SEASON.EA2017pre4,
-				match: MATCH.SOLO
-			});
-			message.channel.send('```' + stats.playerName + "'s SOLO Stats" +
-			'\nPlayer Rank: ' + stats.rankData.rating +
-			'\nRounds Played: ' + stats.performance.roundsPlayed +
-			'\nTotal Kills: ' + stats.combat.kills +
-			'\nK/D Ratio: ' + stats.performance.killDeathRatio +
-			'\nHeadShot Kills: ' + stats.combat.headshotKills +
-			'\nHeadShot Kill Ratio: ' + stats.combat.headshotKillRatio + '%' +
-			'\nWins: ' + stats.performance.wins +
-			'\nWin Ratio: ' + stats.performance.winRatio + '%' +
-			'\nLosses: ' + stats.performance.losses +
-			'\nTop 10s: ' + stats.performance.top10s +
-			'\nTop 10 Ratio: ' + stats.performance.top10Ratio + '%' +
-			'```');
-		})
-		.catch((err) => {
-			message.channel.send('```' + 'Error: ' + playerVar + ' not found for season 4 or server is busy. Try again later' + '```');
-		});
+	if (message.content === 'istatistik') {
+		varUR_L="http://csgo.tracker.network/profile/"+args[1];
+		if(!args[1]){
+			returnmessage.channel.send("PleaseEnteravalidSTEAMID64orcustomurl");
+		}
+		request(UR_L,function(err,resp,body){
+			$=cheerio.load(body);
+			varKD=getStatData(0,message,$);
+			varWIN=getStatData(1,message,$);
+			varHS=getStatData(4,message,$);
+			varMONEY=getStatData(5,message,$);
+			varSCORE=getStatData(6,message,$);
+			varKILLS=getStatData(7,message,$);
+			varDEATHS=getStatData(8,message,$);
+			varMVP=getStatData(9,message,$);
+			varBS=getStatData(13,message,$);
+			varBD=getStatData(14,message,$);
+			varHR=getStatData(15,message,$);
+			varSTAT=newDiscord.RichEmbed()
+			.setTitle("__***CSGOStats***__")
+			.setURL(UR_L)
+			.addField("------------------------------------",
+			"TotalKD:"+"__**"+KD+"**__"+"\n"+
+			"TotalWin%:"+"__**"+WIN+"**__"+"\n"+
+			"TotalMVPs:"+"__**"+MVP+"**__"+"\n"+
+			"TotalScore:"+"__**"+SCORE+"**__"+"\n"+
+			"TotalKills:"+"__**"+KILLS+"**__"+"\n"+
+			"TotalDeaths:"+"__**"+DEATHS+"**__"+"\n"+
+			"TotalBombsSet:"+"__**"+BS+"**__"+"\n"+
+			"TotalBombsDefused:"+"__**"+BD+"**__"+"\n"+
+			"TotalHeadshots:"+"__**"+HS+"**__"+"\n"+
+			"TotalMoneyEarned:"+"__**"+MONEY+"**__"+"\n"+
+			"TotalHostagesRescued:"+"__**"+HR+"**__"+"\n"+
+			"------------------------------------\n",true)
+			.setColor('RANDOM')
+			message.channel.send(STAT);
+		})break;
 	}
-	if (command === "pubgduo") {
-		var playerVar = args.slice(0, 1).join(' ');
-		if ( !playerVar || playerVar < 2 ) {
-			message.channel.send('Error! make sure you add a player name.\n' + '\nExample: `!pubg AHappyTeddyBears`');
-		} else
-			api.getProfileByNickname(playerVar)
-			.then((profile) => {
-			const data = profile.content;
-			const stats = profile.getStats({
-			region: REGION.ALL,
-			season: SEASON.EA2017pre4,
-			match: MATCH.DUO
-		});
-		message.channel.send('```' + stats.playerName + "'s DUO Stats" +
-		'\nPlayer Rank: ' + stats.rankData.rating +
-		'\nRounds Played: ' + stats.performance.roundsPlayed +
-		'\nTotal Kills: ' + stats.combat.kills +
-		'\nK/D Ratio: ' + stats.performance.killDeathRatio +
-		'\nHeadShot Kills: ' + stats.combat.headshotKills +
-		'\nHeadShot Kill Ratio: ' + stats.combat.headshotKillRatio + '%' +
-		'\nWins: ' + stats.performance.wins +
-		'\nWin Ratio: ' + stats.performance.winRatio + '%' +
-		'\nLosses: ' + stats.performance.losses +
-		'\nTop 10s: ' + stats.performance.top10s +
-		'\nTop 10 Ratio: ' + stats.performance.top10Ratio + '%' +
-		'```');
-		})
-		.catch((err) => {
-			message.channel.send('```' + 'Error: ' + playerVar + ' not found for season 4 or server is busy. Try again later' + '```');
-		});
-	}
-	if (command === "pubgsquad") {
-		var playerVar = args.slice(0, 1).join(' ');
-		if ( !playerVar || playerVar < 2 ) {
-			message.channel.send('Error! make sure you add a player name.\n' + '\nExample: `!pubg AHappyTeddyBears`');
-		} else
-			api.getProfileByNickname(playerVar)
-		.then((profile) => {
-			const data = profile.content;
-			const stats = profile.getStats({
-				region: REGION.ALL,
-				season: SEASON.EA2017pre4,
-				match: MATCH.SQUAD
-			});
-			message.channel.send('```' + stats.playerName + "'s SQUAD Stats" +
-			'\nPlayer Rank: ' + stats.rankData.rating +
-			'\nRounds Played: ' + stats.performance.roundsPlayed +
-			'\nTotal Kills: ' + stats.combat.kills +
-			'\nK/D Ratio: ' + stats.performance.killDeathRatio +
-			'\nHeadShot Kills: ' + stats.combat.headshotKills +
-			'\nHeadShot Kill Ratio: ' + stats.combat.headshotKillRatio + '%' +
-			'\nWins: ' + stats.performance.wins +
-			'\nWin Ratio: ' + stats.performance.winRatio + '%' +
-			'\nLosses: ' + stats.performance.losses +
-			'\nTop 10s: ' + stats.performance.top10s +
-			'\nTop 10 Ratio: ' + stats.performance.top10Ratio + '%' +
-			'```');
-			})
-		.catch((err) => {
-			message.channel.send('```' + 'Error: ' + playerVar + ' not found for season 4 or server is busy. Try again later' + '```');
-		});
-	}*/
 });
+
 client.on('guildMemberAdd', async member => {
         member.addRole(`428536643042017284`);
 });
