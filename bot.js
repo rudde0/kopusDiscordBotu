@@ -4,6 +4,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
 	console.log('Köpüş bot, etkinleştirildi!')
 	client.user.setPresence({ game: { name: 'bit.ly/kopusDC', type: 0 } });
+	var prefix = (file.prefix[message.guild.id] == undefined) ? file.prefix["default"] : file.prefix[message.guild.id];
 });
 
 function getStatData(location, message , $){
