@@ -138,7 +138,7 @@ client.on('message', message => {
 			"------------------------------------\n",true)
 			.setColor('RANDOM')
 			message.channel.send(STAT);
-		})break;
+		});
 	}
 });
 
