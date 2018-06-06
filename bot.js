@@ -74,7 +74,7 @@ client.on('message', message => {
 		}
 	}
 	if (message.content === 'diğer') {
-		if (message.channel.id === `453936138986717199`) {
+		if (message.channel.id === `452575245052674058`) {
 			if(message.member.roles.has(`453935578824835103`)) {
 				message.member.removeRole(`453935578824835103`);
 				message.channel.reply('\nArtık **oyun_diğer** kanalını göremeyeceksiniz. Görebilmek için tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.')
