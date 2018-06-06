@@ -4,7 +4,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
 	console.log('Köpüş bot, etkinleştirildi!')
 	client.user.setPresence({ game: { name: 'bit.ly/kopusDC', type: 0 } });
-	var prefix = (file.prefix[message.guild.id] == undefined) ? file.prefix["default"] : file.prefix[message.guild.id];
+	//var prefix = (file.prefix[message.guild.id] == undefined) ? file.prefix["default"] : file.prefix[message.guild.id];
 });
 
 function getStatData(location, message , $){
@@ -22,7 +22,7 @@ function getStatData(location, message , $){
 }
 
 client.on('message', message => {
-	const args = message.content.slice(prefix.length).trim().split(/ +/g);
+	const args = message.content.slice('!'.length).trim().split(/ +/g);
 	const command = args.shift().toLowerCase();
 	if (message.content === 'komutlar') {
 		message.channel.send(`Sunucumuzda kullanabildiğin komutları aşağıda listeledik! :upside_down:\n\n**»** Arkadaşınla ortak video izleyebilmek için: __http://bit.ly/kopusw2gether__\n\n**»** Sunucu anlık davet bağlantısı: __http://bit.ly/kopusDC__\n\n**»** Müzik botunu kanalına çağırmak için:\n\n__!!!play -müzik bağlantısı veya isim-__\n__!!!c -seçenek-__\n\n**»** Oynadığın oyunla ilgili sohbet kanalına erişim için sohbete şunu yazabilirsin:\n__lol__, __cs__, __pubg__\n\n**»** Sıkça sorulan sorulara bakmak için sohbete __sss__ yazabilirsin.`);
