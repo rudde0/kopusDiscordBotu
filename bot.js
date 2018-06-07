@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const prefix = "!";
 
 client.on('ready', () => {
 	console.log('Köpüş bot, etkinleştirildi!')
 	client.user.setPresence({ game: { name: 'bit.ly/kopusDC', type: 0 } });
-	var prefix = "!";
 });
 
 function getStatData(location, message , $){
