@@ -103,7 +103,7 @@ client.on('message', message => {
 		}
 	}
 	if (message.content === '!istatistik') {
-		var UR_L = "http://csgo.tracker.network/profile/ruddeTR"+args[1];
+		var UR_L = "http://csgo.tracker.network/profile/"+args[1];
 		if(!args[1]){
 			return message.channel.send("Geçerli bir steam kullanıcı adı veya SteamID64 girmelisin.");
 		}
@@ -120,7 +120,7 @@ client.on('message', message => {
 			var BS = getStatData(13,message,$);
 			var BD = getStatData(14,message,$);
 			var HR = getStatData(15,message,$);
-			var STAT = newDiscord.RichEmbed()
+			var STAT = new Discord.RichEmbed()
 			.setTitle("__***CSGOStats***__")
 			.setURL(UR_L)
 			.addField("------------------------------------",
