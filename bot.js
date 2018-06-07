@@ -102,7 +102,7 @@ client.on('message', message => {
 			}
 		}
 	}
-	if (command === 'istatistik') {
+	/*if (command === 'istatistik') {
 		var UR_L = "http://csgo.tracker.network/profile/"+args[1];
 		if(!args[1]){
 			return message.channel.send("Geçerli bir steam kullanıcı adı veya SteamID64 girmelisin.");
@@ -139,7 +139,7 @@ client.on('message', message => {
 			.setColor('RANDOM')
 			message.channel.send(STAT);
 		});
-	}
+	}*/
 });
 
 client.on('guildMemberAdd', async member => {
