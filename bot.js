@@ -7,7 +7,7 @@ client.on('ready', () => {
 	//var prefix = (file.prefix[message.guild.id] == undefined) ? file.prefix["default"] : file.prefix[message.guild.id];
 });
 
-/*function getStatData(location, message , $){
+function getStatData(location, message , $){
 	var selector = $('.stats-stat .value').eq(location).text();
 	var stat_array = $.parseHTML(selector);
 	var stat = 0;
@@ -19,11 +19,11 @@ client.on('ready', () => {
 }
 
   return stat;
-}*/
+}
 
 client.on('message', message => {
-	//const args = trim().split(/ +/g);//message.content.slice("!".length).trim().split(/ +/g);
-	//const command = args.shift().toLowerCase();
+	const args = message.content.slice("!".length).trim().split(/ +/g);
+	const command = args.shift().toLowerCase();
 	if (message.content === 'komutlar') {
 		message.channel.send(`Sunucumuzda kullanabildiğin komutları aşağıda listeledik! :upside_down:\n\n**»** Arkadaşınla ortak video izleyebilmek için: __http://bit.ly/kopusw2gether__\n\n**»** Sunucu anlık davet bağlantısı: __http://bit.ly/kopusDC__\n\n**»** Müzik botunu kanalına çağırmak için:\n\n__!!!play -müzik bağlantısı veya isim-__\n__!!!c -seçenek-__\n\n**»** Oynadığın oyunla ilgili sohbet kanalına erişim için sohbete şunu yazabilirsin:\n__lol__, __cs__, __pubg__\n\n**»** Sıkça sorulan sorulara bakmak için sohbete __sss__ yazabilirsin.`);
 	}
@@ -102,10 +102,10 @@ client.on('message', message => {
 			}
 		}
 	}
-/*	if (message.content === '!istatistik') {
+	if (message.content === '!istatistik') {
 		var UR_L = "http://csgo.tracker.network/profile/ruddeTR"+args[1];
 		if(!args[1]){
-			return message.channel.send("PleaseEnteravalidSTEAMID64orcustomurl");
+			return message.channel.send("Geçerli bir steam kullanıcı adı veya SteamID64 girmelisin.");
 		}
 		request(UR_L,function(err,resp,body){
 			$=cheerio.load(body);
@@ -139,7 +139,7 @@ client.on('message', message => {
 			.setColor('RANDOM')
 			message.channel.send(STAT);
 		});
-	}*/
+	}
 });
 
 client.on('guildMemberAdd', async member => {
