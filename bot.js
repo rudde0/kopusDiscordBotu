@@ -1,29 +1,12 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-//const prefix = "!";
 
 client.on('ready', () => {
 	console.log('Köpüş bot, etkinleştirildi!')
 	client.user.setPresence({ game: { name: 'bit.ly/kopusDC', type: 0 } });
 });
 
-/*function getStatData(location, message , $){
-	var selector = $('.stats-stat .value').eq(location).text();
-	var stat_array = $.parseHTML(selector);
-	var stat = 0;
-	if(stat_array == null || stat_array.lengh == 0){
-		message.channel.send("Invalid User");
-		return " ";
-	} else {
-		stat = stat_array[0].data;
-}
-
-  return stat;
-}*/
-
 client.on('message', message => {
-	/*const args = message.content.slice(prefix.length).trim().split(/ +/g);
-	const command = args.shift().toLowerCase();*/
 	if (message.content === 'komutlar') {
 		message.channel.send(`Sunucumuzda kullanabildiğin komutları aşağıda listeledik! :upside_down:\n\n**»** Arkadaşınla ortak video izleyebilmek için: __http://bit.ly/kopusw2gether__\n\n**»** Sunucu anlık davet bağlantısı: __http://bit.ly/kopusDC__\n\n**»** Müzik botunu kanalına çağırmak için:\n\n__!!!play -müzik bağlantısı veya isim-__\n__!!!c -seçenek-__\n\n**»** Oynadığın oyunla ilgili sohbet kanalına erişim için sohbete şunu yazabilirsin:\n__lol__, __cs__, __pubg__\n\n**»** Sıkça sorulan sorulara bakmak için sohbete __sss__ yazabilirsin.`);
 	}
@@ -60,12 +43,12 @@ client.on('message', message => {
 		if (message.channel.id === `452575245052674058`) {
 			if(message.member.roles.has(`453186864422191149`)) {
 				message.member.removeRole(`453186864422191149`);
-				message.delete(120);
-				message.author.send('\nArtık **lol_odası** kanalını göremeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.')
+				//message.delete(120)
+				message.channel.reply('\nArtık **lol_odası** kanalını göremeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.')
 			} else {
 				message.member.addRole(`453186864422191149`);
-				message.delete(120);
-				message.author.send('\nArtık **lol_odası** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.')
+				//message.delete(120)
+				message.channel.reply('\nArtık **lol_odası** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.')
 			}
 		}
 	}
@@ -73,12 +56,10 @@ client.on('message', message => {
 		if (message.channel.id === `452575245052674058`) {
 			if(message.member.roles.has(`453190356956348416`)) {
 				message.member.removeRole(`453190356956348416`);
-				message.delete(120);
-				message.author.send('\nArtık **pubg_odası** kanalını göremeyeceksiniz. Görebilmek için tekrar **bot_kanalları** odasına **pubg** yazmanız gerekli.')
+				message.channel.reply('\nArtık **pubg_odası** kanalını göremeyeceksiniz. Görebilmek için tekrar **bot_kanalları** odasına **pubg** yazmanız gerekli.')
 			} else {
 				message.member.addRole(`453190356956348416`);
-				message.delete(120);
-				message.author.send('\nArtık **pubg_odası** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **pubg** yazmanız gerekli.')
+				message.channel.reply('\nArtık **pubg_odası** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **pubg** yazmanız gerekli.')
 			}
 		}
 	}
@@ -86,12 +67,10 @@ client.on('message', message => {
 		if (message.channel.id === `452575245052674058`) {
 			if(message.member.roles.has(`453190327252287499`)) {
 				message.member.removeRole(`453190327252287499`);
-				message.delete(120);
-				message.author.send('\nArtık **cs_odası** kanalını göremeyeceksiniz. Görebilmek için tekrar **bot_kanalları** odasına **cs** yazmanız gerekli.')
+				message.channel.reply('\nArtık **cs_odası** kanalını göremeyeceksiniz. Görebilmek için tekrar **bot_kanalları** odasına **cs** yazmanız gerekli.')
 			} else {
 				message.member.addRole(`453190327252287499`);
-				message.delete(120);
-				message.author.send('\nArtık **cs_odası** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **cs** yazmanız gerekli.')
+				message.channel.reply('\nArtık **cs_odası** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **cs** yazmanız gerekli.')
 			}
 		}
 	}
@@ -99,55 +78,14 @@ client.on('message', message => {
 		if (message.channel.id === `452575245052674058`) {
 			if(message.member.roles.has(`453935578824835103`)) {
 				message.member.removeRole(`453935578824835103`);
-				message.delete(120);
-				message.author.send('\nArtık **oyun_diğer** kanalını göremeyeceksiniz. Görebilmek için tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.')
+				message.channel.reply('\nArtık **oyun_diğer** kanalını göremeyeceksiniz. Görebilmek için tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.')
 			} else {
 				message.member.addRole(`453935578824835103`);
-				message.delete(120);
-				message.author.send('\nArtık **oyun_diğer** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.')
+				message.channel.reply('\nArtık **oyun_diğer** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.')
 			}
 		}
 	}
-	/*if (command === 'istatistik') {
-		var UR_L = "http://csgo.tracker.network/profile/"+args[1];
-		if(!args[1]){
-			return message.channel.send("Geçerli bir steam kullanıcı adı veya SteamID64 girmelisin.");
-		}
-		request(UR_L,function(err,resp,body){
-			$=cheerio.load(body);
-			var KD = getStatData(0,message,$);
-			var WIN = getStatData(1,message,$);
-			var HS = getStatData(4,message,$);
-			var MONEY = getStatData(5,message,$);
-			var SCORE = getStatData(6,message,$);
-			var KILLS = getStatData(7,message,$);
-			var DEATHS = getStatData(8,message,$);
-			var MVP = getStatData(9,message,$);
-			var BS = getStatData(13,message,$);
-			var BD = getStatData(14,message,$);
-			var HR = getStatData(15,message,$);
-			var STAT = new Discord.RichEmbed()
-			.setTitle("__***CSGOStats***__")
-			.setURL(UR_L)
-			.addField("------------------------------------",
-			"TotalKD:"+"__**"+KD+"**__"+"\n"+
-			"TotalWin%:"+"__**"+WIN+"**__"+"\n"+
-			"TotalMVPs:"+"__**"+MVP+"**__"+"\n"+
-			"TotalScore:"+"__**"+SCORE+"**__"+"\n"+
-			"TotalKills:"+"__**"+KILLS+"**__"+"\n"+
-			"TotalDeaths:"+"__**"+DEATHS+"**__"+"\n"+
-			"TotalBombsSet:"+"__**"+BS+"**__"+"\n"+
-			"TotalBombsDefused:"+"__**"+BD+"**__"+"\n"+
-			"TotalHeadshots:"+"__**"+HS+"**__"+"\n"+
-			"TotalMoneyEarned:"+"__**"+MONEY+"**__"+"\n"+
-			"TotalHostagesRescued:"+"__**"+HR+"**__"+"\n"+
-			"------------------------------------\n",true)
-			.setColor('RANDOM')
-			message.channel.send(STAT);
-		});
-	}*/
 });
-
 client.on('guildMemberAdd', async member => {
         member.addRole(`428536643042017284`);
 });
