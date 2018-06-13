@@ -57,11 +57,11 @@ client.on('message', message => {
 			if(message.member.roles.has(`453190356956348416`)) {
 				message.member.removeRole(`453190356956348416`);
 				message.delete(120)
-				message.channel.reply("\nArtık **pubg_odası** kanalını göremeyeceksiniz. Görebilmek için tekrar **bot_kanalları** odasına **pubg** yazmanız gerekli.")
+				message.author.send("\nArtık **pubg_odası** kanalını göremeyeceksiniz. Görebilmek için tekrar **bot_kanalları** odasına **pubg** yazmanız gerekli.")
 			} else {
 				message.member.addRole(`453190356956348416`);
 				message.delete(120)
-				message.channel.reply("\nArtık **pubg_odası** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **pubg** yazmanız gerekli.")
+				message.author.send("\nArtık **pubg_odası** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **pubg** yazmanız gerekli.")
 			}
 		}
 	}
@@ -70,11 +70,11 @@ client.on('message', message => {
 			if(message.member.roles.has(`453190327252287499`)) {
 				message.member.removeRole(`453190327252287499`);
 				message.delete(120)
-				message.channel.reply("\nArtık **cs_odası** kanalını göremeyeceksiniz. Görebilmek için tekrar **bot_kanalları** odasına **cs** yazmanız gerekli.")
+				message.author.send("\nArtık **cs_odası** kanalını göremeyeceksiniz. Görebilmek için tekrar **bot_kanalları** odasına **cs** yazmanız gerekli.")
 			} else {
 				message.member.addRole(`453190327252287499`);
 				message.delete(120)
-				message.channel.reply("\nArtık **cs_odası** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **cs** yazmanız gerekli.")
+				message.author.send("\nArtık **cs_odası** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **cs** yazmanız gerekli.")
 			}
 		}
 	}
@@ -83,11 +83,11 @@ client.on('message', message => {
 			if(message.member.roles.has(`453935578824835103`)) {
 				message.member.removeRole(`453935578824835103`);
 				message.delete(120)
-				message.channel.reply("\nArtık **oyun_diğer** kanalını göremeyeceksiniz. Görebilmek için tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.")
+				message.author.send("\nArtık **oyun_diğer** kanalını göremeyeceksiniz. Görebilmek için tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.")
 			} else {
 				message.member.addRole(`453935578824835103`);
 				message.delete(120)
-				message.channel.reply("\nArtık **oyun_diğer** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.")
+				message.author.send("\nArtık **oyun_diğer** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.")
 			}
 		}
 	}
