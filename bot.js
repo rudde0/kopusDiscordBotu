@@ -44,11 +44,11 @@ client.on('message', message => {
 			if(message.member.roles.has(`453186864422191149`)) {
 				message.member.removeRole(`453186864422191149`);
 				message.delete(120)
-				message.channel.reply('\nArtık **lol_odası** kanalını göremeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.')
+				message.author.send('\nArtık **lol_odası** kanalını göremeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.')
 			} else {
 				message.member.addRole(`453186864422191149`);
 				message.delete(120)
-				message.channel.reply('\nArtık **lol_odası** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.')
+				message.author.send('\nArtık **lol_odası** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.')
 			}
 		}
 	}
