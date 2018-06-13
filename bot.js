@@ -40,7 +40,7 @@ client.on('message', message => {
 		}
 	}
 	if (message.content === 'lol') {
-		if (message.channel.id === `456246159250423809`) {
+		if (message.channel.id === `456256245569945620`) {
 			if(message.member.roles.has(`453186864422191149`)) {
 				message.member.removeRole(`453186864422191149`);
 				message.delete(120);
@@ -53,7 +53,7 @@ client.on('message', message => {
 		}
 	}
 	if (message.content === 'pubg') {
-		if (message.channel.id === `456246159250423809`) {
+		if (message.channel.id === `456256245569945620`) {
 			if(message.member.roles.has(`453190356956348416`)) {
 				message.member.removeRole(`453190356956348416`);
 				message.delete(120);
@@ -66,7 +66,7 @@ client.on('message', message => {
 		}
 	}
 	if (message.content === 'cs') {
-		if (message.channel.id === `456246159250423809`) {
+		if (message.channel.id === `456256245569945620`) {
 			if(message.member.roles.has(`453190327252287499`)) {
 				message.member.removeRole(`453190327252287499`);
 				message.delete(120);
@@ -79,7 +79,7 @@ client.on('message', message => {
 		}
 	}
 	if (message.content === 'diğer') {
-		if (message.channel.id === `456246159250423809`) {
+		if (message.channel.id === `456256245569945620`) {
 			if(message.member.roles.has(`453935578824835103`)) {
 				message.member.removeRole(`453935578824835103`);
 				message.delete(120);
