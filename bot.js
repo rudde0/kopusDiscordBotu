@@ -39,7 +39,7 @@ client.on('message', message => {
 			message.author.send({embed: embed});
 		}
 	}
-	if (message.content === 'lol') {
+	/*if (message.content === 'lol') {
 		if (message.channel.id === `456246159250423809`) {
 			if(message.member.roles.has(`453186864422191149`)) {
 				message.member.removeRole(`453186864422191149`);
@@ -73,15 +73,15 @@ client.on('message', message => {
 				message.channel.reply(`\nArtık **cs_odası** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **cs** yazmanız gerekli.`)
 			}
 		}
-	}
+	}*/
 	if (message.content === 'diğer') {
 		if (message.channel.id === `456246159250423809`) {
 			if(message.member.roles.has(`453935578824835103`)) {
 				message.member.removeRole(`453935578824835103`);
-				message.channel.reply(`\nArtık **oyun_diğer** kanalını göremeyeceksiniz. Görebilmek için tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.`)
+				message.channel.reply(`\nArtık **oyun_diğer** kanalını göremeyeceksiniz. Görebilmek için tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.`);
 			} else {
 				message.member.addRole(`453935578824835103`);
-				message.channel.reply(`\nArtık **oyun_diğer** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.`)
+				message.channel.reply(`\nArtık **oyun_diğer** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.`);
 			}
 		}
 	}
