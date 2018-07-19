@@ -157,25 +157,27 @@ client.on('message', message => {
 	
 	if (message.content === 'vip') {
 		if (message.channel.id === `456256245569945620`) {
-			if (!OzelUyelik.has(message.author.id)) {
-				OzelUyelik.add(message.author.id);
-				message.member.addRole(`415940226519793676`);
-				message.delete(120);
-				var embed = new Discord.RichEmbed()
-				.setColor('#00FF00')
-				.setTimestamp()
-				.setAuthor(message.author.username, message.author.avatarURL)
-				.setThumbnail(message.guild.iconURL)
-				.addField("Yetki Güncellemesi", "Tebrikler!\n\nArtık sen de bu topluluğun bir\n**Özel Üye**sisin, aramızda kalıcı olman dileğiyle!")
-				message.author.send({embed: embed});
-			} else {
-				var embed = new Discord.RichEmbed()
-				.setColor('#EC0C0C')
-				.setTimestamp()
-				.setAuthor(message.author.username, message.author.avatarURL)
-				.setThumbnail(message.guild.iconURL)
-				.addField("Yetki Güncellemesinde Hata", "Daha önceden VIP olduğunuz için bu komutu kullanma hakkınız kalmadı.")
-				message.author.send({embed: embed});
+			if(!message.member.roles.has(`415940226519793676`)) {
+				if (!OzelUyelik.has(message.author.id)) {
+					OzelUyelik.add(message.author.id);
+					message.member.addRole(`415940226519793676`);
+					message.delete(120);
+					var embed = new Discord.RichEmbed()
+					.setColor('#00FF00')
+					.setTimestamp()
+					.setAuthor(message.author.username, message.author.avatarURL)
+					.setThumbnail(message.guild.iconURL)
+					.addField("Yetki Güncellemesi", "Tebrikler!\n\nArtık sen de bu topluluğun bir Özel Üyesisin.\n\nAramızda kalıcı olman dileğiyle!")
+					message.author.send({embed: embed});
+				} else {
+					var embed = new Discord.RichEmbed()
+					.setColor('#EC0C0C')
+					.setTimestamp()
+					.setAuthor(message.author.username, message.author.avatarURL)
+					.setThumbnail(message.guild.iconURL)
+					.addField("Yetki Güncellemesinde Hata", "Şu an veya daha önceden bu komutla VIP olduğunuz için bu komutu kullanma hakkınız kalmadı.")
+					message.author.send({embed: embed});
+				}
 			}
 		}
 	}
