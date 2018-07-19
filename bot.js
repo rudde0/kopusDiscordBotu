@@ -11,15 +11,21 @@ client.on('message', message => {
 		message.channel.send(`Sunucumuzda kullanabildiğin komutları aşağıda listeledik! :upside_down:\n\n**»** Arkadaşınla ortak video izleyebilmek için: __http://bit.ly/kopusw2gether__\n\n**»** Sunucu anlık davet bağlantısı: __http://bit.ly/kopusDC__\n\n**»** Müzik botunu kanalına çağırmak için (**VIP** üstü kullanabilir):\n__play -müzik bağlantısı veya isim-__\nDurdurmak için ise __stop__\n\n**»** Oynadığın oyunla ilgili sohbet kanalına erişim için sohbete şunu yazabilirsin:\n__lol__, __cs__, __pubg__, __diğer__\n\n**»** Sıkça sorulan sorulara bakmak için sohbete __sss__ yazabilirsin.`);
 	}
 	if (message.content === 'sss') {
-		message.channel.send(`**S:** Köpüşlerin olayı nedir, nasıl olunur?\nBurası arkadaş topluluğudur. Köpüş grubundakiler ise bu topluluktaki herkesle iletişimi olmuş, Köpüş grubuna bir şeyler katmış insanlardan oluşmaktadır. Köpüş olmak için herhangi bir şart belirlemedik. Burada uzun süre vakit geçirdikten sonra kendini Köpüşlerin arasında görebilirsin.\n\n**S:** Köpüşlerdeki yıldızlar neyi ifade ediyor?\nHer bir **★**, o kişinin en az iki yıldır Köpüş grubunda bulunmuş olduğunu gösteriyor. Örneğin 2 yıldızı olan bir Köpüş üyesi, 4 senedir bu topluluğun içinde anlamına gelmekte, **☆** ise her bir yılı ifade ediyor. Örneğin, bir yıldır kişi, Köpüş grubundaysa **☆** ifadesi kazanır.\nÖrneğin, **Asof** aramıza 2015 yılında katıldığı için **★☆** (3 yıl) yıldızlarına sahip.`);
+		message.channel.send(`**S:** Köpüşlerin olayı nedir, nasıl olunur?\nBurası arkadaş topluluğudur. Köpüş grubundakiler ise bu topluluktaki herkesle iletişimi olmuş, Köpüş grubuna bir şeyler katmış insanlardan oluşmaktadır. Köpüş olmak için herhangi bir şart belirlemedik. Burada uzun süre vakit geçirdikten sonra kendini Köpüşlerin arasında erişebilirsin.\n\n**S:** Köpüşlerdeki yıldızlar/aylar neyi ifade ediyor?\nAy simgesi(**☾**) o kişinin belirli sebeplerden ötürü sunucuya bir süre bakmayacağı anlamına geliyor.\nHer bir **★**, o kişinin en az iki yıldır Köpüş grubunda bulunmuş olduğunu gösteriyor. Örneğin 2 yıldızı olan bir Köpüş üyesi, 4 senedir bu topluluğun içinde anlamına gelmekte, **☆** ise her bir yılı ifade ediyor. Örneğin, bir yıldır kişi, Köpüş grubundaysa **☆** ifadesi kazanır.\nÖrneğin, **Asof** aramıza 2015 yılında katıldığı için **★☆** (3 yıl) yıldızlarına sahip.`);
 	}
 	if (message.content === 'ikimesajbirlestirkopusbot') {
 		if(message.member.roles.has(`407204500018036737`)) {
 			message.delete(120);
-			message.channel.send(`Sunucumuzda kullanabildiğin komutları aşağıda listeledik! :upside_down:\n\n**»** Arkadaşınla ortak video izleyebilmek için: __http://bit.ly/kopusw2gether__\n\n**»** Sunucu anlık davet bağlantısı: __http://bit.ly/kopusDC__\n\n**»** Müzik botunu kanalına çağırmak için (**VIP** üstü kullanabilir):\n__play -müzik bağlantısı veya isim-__\nDurdurmak için ise __stop__\n\n**»** Oynadığın oyunla ilgili sohbet kanalına erişim için sohbete şunu yazabilirsin:\n__lol__, __cs__, __pubg__, __diğer__\n\n**»** Sıkça sorulan sorulara bakmak için sohbete __sss__ yazabilirsin.\n\n**S:** Köpüşlerin olayı nedir, nasıl olunur?\nBurası arkadaş topluluğudur. Köpüş grubundakiler ise bu topluluktaki herkesle iletişimi olmuş, Köpüş grubuna bir şeyler katmış insanlardan oluşmaktadır. Köpüş olmak için herhangi bir şart belirlemedik. Burada uzun süre vakit geçirdikten sonra kendini Köpüşlerin arasında görebilirsin.\n\n**S:** Köpüşlerdeki yıldızlar neyi ifade ediyor?\nHer bir **★**, o kişinin en az iki yıldır Köpüş grubunda bulunmuş olduğunu gösteriyor. Örneğin 2 yıldızı olan bir Köpüş üyesi, 4 senedir bu topluluğun içinde anlamına gelmekte, **☆** ise her bir yılı ifade ediyor. Örneğin, bir yıldır kişi, Köpüş grubundaysa **☆** ifadesi kazanır.\nÖrneğin, **Asof** aramıza 2015 yılında katıldığı için **★☆** (3 yıl) yıldızlarına sahip.`);
+			message.channel.send(`Sunucumuzda kullanabildiğin komutları aşağıda listeledik! :upside_down:\n\n**»** Arkadaşınla ortak video izleyebilmek için: __http://bit.ly/kopusw2gether__\n\n**»** Sunucu anlık davet bağlantısı: __http://bit.ly/kopusDC__\n\n**»** Müzik botunu kanalına çağırmak için (**VIP** üstü kullanabilir):\n__play -müzik bağlantısı veya isim-__\nDurdurmak için ise __stop__\n\n**»** Oynadığın oyunla ilgili sohbet kanalına erişim için sohbete şunu yazabilirsin:\n__lol__, __cs__, __pubg__, __diğer__\n\n**»** Sıkça sorulan sorulara bakmak için sohbete __sss__ yazabilirsin.\n\n**S:** Köpüşlerin olayı nedir, nasıl olunur?\nBurası arkadaş topluluğudur. Köpüş grubundakiler ise bu topluluktaki herkesle iletişimi olmuş, Köpüş grubuna bir şeyler katmış insanlardan oluşmaktadır. Köpüş olmak için herhangi bir şart belirlemedik. Burada uzun süre vakit geçirdikten sonra kendini Köpüşlerin arasında erişebilirsin.\n\n**S:** Köpüşlerdeki yıldızlar/aylar neyi ifade ediyor?\nAy simgesi(**☾**) o kişinin belirli sebeplerden ötürü sunucuya bir süre bakmayacağı anlamına geliyor.\nHer bir **★**, o kişinin en az iki yıldır Köpüş grubunda bulunmuş olduğunu gösteriyor. Örneğin 2 yıldızı olan bir Köpüş üyesi, 4 senedir bu topluluğun içinde anlamına gelmekte, **☆** ise her bir yılı ifade ediyor. Örneğin, bir yıldır kişi, Köpüş grubundaysa **☆** ifadesi kazanır.\nÖrneğin, **Asof** aramıza 2015 yılında katıldığı için **★☆** (3 yıl) yıldızlarına sahip.`);
 		} else {
 			message.delete(120);
-			message.author.send(`Bu komutu sadece **Köpüş Kurucuları** kullanabilir.`);
+			var embed = new Discord.RichEmbed()
+			.setColor('#EB0C0C')
+			.setTimestamp()
+			.setAuthor(message.author.username, message.author.avatarURL)
+			.setThumbnail(message.guild.iconURL)
+			.addField("Bir hata meydana geldi", "Sunucuda kullanmaya çalıştığın komuta maalesef sadece Topluluk Yöneticileri erişebiliyor.")
+			message.author.send({embed: embed});
 		}
 	}
 	if (message.content === 'köpüş') {
@@ -30,7 +36,7 @@ client.on('message', message => {
 			//message.author.send('Köpüş sunucusunun topluluk kurallarını kabul ettiğin için teşekkür ederiz.\nArtık sunucudaki diğer sesli odalara ve metin kanallarına erişebilirsin.\n\nSık Kullanılan Bağlantılar:\n\n**»** Arkadaşınla ortak video izleyebilmek için: __http://bit.ly/kopusw2gether__\n\n**»** Sunucu anlık davet bağlantısı: __http://bit.ly/kopusDC__\n\n**»** Müzik botunu kanalına çağırmak için:\n\n__!!!play -müzik bağlantısı veya isim-__\n__!!!c -seçenek-__')
 			var embed = new Discord.RichEmbed()
 			.setColor('#f8f808')
-			//.setTimestamp()
+			.setTimestamp()
 			.setAuthor(message.author.username, message.author.avatarURL)
 			.setThumbnail(message.guild.iconURL)
 			.addField("Katıldığın için teşekkür ederiz!", "Köpüş sunucusunun topluluk kurallarını kabul ettiğin için teşekkür ederiz. Artık sunucudaki diğer sesli odalara ve metin kanallarına erişebilirsin.\n⠀")
@@ -45,10 +51,23 @@ client.on('message', message => {
 				message.member.removeRole(`453186864422191149`);
 				message.delete(120);
 				message.author.send(`\nArtık **lol_odası** kanalını göremeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.`);
+				var embed = new Discord.RichEmbed()
+				.setColor('#f8f808')
+				.setTimestamp()
+				.setAuthor(message.author.username, message.author.avatarURL)
+				.setThumbnail(message.guild.iconURL)
+				.addField("Yetki Güncellemesi", "Artık **lol_odası** kanalını göremeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.")
+				message.author.send({embed: embed});
 			} else {
 				message.member.addRole(`453186864422191149`);
 				message.delete(120);
-				message.author.send(`\nArtık **lol_odası** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.`);
+				var embed = new Discord.RichEmbed()
+				.setColor('#00ff00')
+				.setTimestamp()
+				.setAuthor(message.author.username, message.author.avatarURL)
+				.setThumbnail(message.guild.iconURL)
+				.addField("Yetki Güncellemesi", "Artık **lol_odası** kanalına erişebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.")
+				message.author.send({embed: embed});
 			}
 		}
 	}
@@ -57,11 +76,23 @@ client.on('message', message => {
 			if(message.member.roles.has(`453190356956348416`)) {
 				message.member.removeRole(`453190356956348416`);
 				message.delete(120);
-				message.author.send(`\nArtık **pubg_odası** kanalını göremeyeceksiniz. Görebilmek için tekrar **bot_kanalları** odasına **pubg** yazmanız gerekli.`);
+				var embed = new Discord.RichEmbed()
+				.setColor('#EC0C0C')
+				.setTimestamp()
+				.setAuthor(message.author.username, message.author.avatarURL)
+				.setThumbnail(message.guild.iconURL)
+				.addField("Yetki Güncellemesi", "Artık **pubg_odası** kanalına erişemeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **pubg** yazmanız gerekli.")
+				message.author.send({embed: embed});
 			} else {
 				message.member.addRole(`453190356956348416`);
 				message.delete(120);
-				message.author.send(`\nArtık **pubg_odası** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **pubg** yazmanız gerekli.`);
+				var embed = new Discord.RichEmbed()
+				.setColor('#00FF00')
+				.setTimestamp()
+				.setAuthor(message.author.username, message.author.avatarURL)
+				.setThumbnail(message.guild.iconURL)
+				.addField("Yetki Güncellemesi", "Artık **pubg_odası** kanalına erişebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **pubg** yazmanız gerekli.")
+				message.author.send({embed: embed});
 			}
 		}
 	}
@@ -70,11 +101,23 @@ client.on('message', message => {
 			if(message.member.roles.has(`453190327252287499`)) {
 				message.member.removeRole(`453190327252287499`);
 				message.delete(120);
-				message.author.send(`\nArtık **cs_odası** kanalını göremeyeceksiniz. Görebilmek için tekrar **bot_kanalları** odasına **cs** yazmanız gerekli.`);
+				var embed = new Discord.RichEmbed()
+				.setColor('#EC0C0C')
+				.setTimestamp()
+				.setAuthor(message.author.username, message.author.avatarURL)
+				.setThumbnail(message.guild.iconURL)
+				.addField("Yetki Güncellemesi", "Artık **cs_odası** kanalına erişemeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **cs** yazmanız gerekli.")
+				message.author.send({embed: embed});
 			} else {
 				message.member.addRole(`453190327252287499`);
 				message.delete(120);
-				message.author.send(`\nArtık **cs_odası** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **cs** yazmanız gerekli.`);
+				var embed = new Discord.RichEmbed()
+				.setColor('#00FF00')
+				.setTimestamp()
+				.setAuthor(message.author.username, message.author.avatarURL)
+				.setThumbnail(message.guild.iconURL)
+				.addField("Yetki Güncellemesi", "Artık **cs_odası** kanalına erişebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **cs** yazmanız gerekli.")
+				message.author.send({embed: embed});			
 			}
 		}
 	}
@@ -83,11 +126,23 @@ client.on('message', message => {
 			if(message.member.roles.has(`453935578824835103`)) {
 				message.member.removeRole(`453935578824835103`);
 				message.delete(120);
-				message.author.send(`\nArtık **oyun_diğer** kanalını göremeyeceksiniz. Görebilmek için tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.`);
+				var embed = new Discord.RichEmbed()
+				.setColor('#EC0C0C')
+				.setTimestamp()
+				.setAuthor(message.author.username, message.author.avatarURL)
+				.setThumbnail(message.guild.iconURL)
+				.addField("Yetki Güncellemesi", "Artık **oyun_diğer** kanalına erişemeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.")
+				message.author.send({embed: embed});	
 			} else {
 				message.member.addRole(`453935578824835103`);
 				message.delete(120);
-				message.author.send(`\nArtık **oyun_diğer** kanalını görebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.`);
+				var embed = new Discord.RichEmbed()
+				.setColor('#EC0C0C')
+				.setTimestamp()
+				.setAuthor(message.author.username, message.author.avatarURL)
+				.setThumbnail(message.guild.iconURL)
+				.addField("Yetki Güncellemesi", "Artık **oyun_diğer** kanalına erişebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.")
+				message.author.send({embed: embed});	
 			}
 		}
 	}
