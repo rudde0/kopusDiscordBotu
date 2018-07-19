@@ -161,33 +161,33 @@ client.on('message', message => {
 				if (!OzelUyelik.has(message.author.id)) {
 					OzelUyelik.add(message.author.id);
 					message.member.addRole(`415940226519793676`);
-					message.delete(120);
+					//message.delete(120);
 					var embed = new Discord.RichEmbed()
 					.setColor('#00FF00')
 					.setTimestamp()
 					.setAuthor(message.author.username, message.author.avatarURL)
 					.setThumbnail(message.guild.iconURL)
-					.addField("Yetki Güncellemesi", "Tebrikler!\n\nArtık sen de bu topluluğun bir Özel Üyesisin.\n\nAramızda kalıcı olman dileğiyle!")
-					message.author.send({embed: embed});
+					.addField("Yetki Güncellemesi (${message.author.username})", "Tebrikler!\n\nArtık sen de bu topluluğun bir Özel Üyesisin.\n\nAramızda kalıcı olman dileğiyle!")
+					message.channel.send({embed: embed});
 				} else {
-					message.delete(120);
+					//message.delete(120);
 					var embed = new Discord.RichEmbed()
 					.setColor('#EC0C0C')
 					.setTimestamp()
 					.setAuthor(message.author.username, message.author.avatarURL)
 					.setThumbnail(message.guild.iconURL)
-					.addField("Yetki Güncellemesinde Hata", "Daha önceden bu komutla Özel Üyelik kazandığın için bu komutu kullanma hakkın kalmadı.")
-					message.author.send({embed: embed});
+					.addField("Yetki Güncellemesinde Hata (${message.author.username})", "Daha önceden bu komutla Özel Üyelik kazandığın için bu komutu kullanma hakkın kalmadı.")
+					message.channel.send({embed: embed});
 				}
 			} else {
-				message.delete(120);
+				//message.delete(120);
 				var embed = new Discord.RichEmbed()
 				.setColor('#EC0C0C')
 				.setTimestamp()
 				.setAuthor(message.author.username, message.author.avatarURL)
 				.setThumbnail(message.guild.iconURL)
-				.addField("Yetki Güncellemesinde Hata", "Halihazırda bir Özel Üyeliğe sahip olduğun için bu komutu kullanamazsın.")
-				message.author.send({embed: embed});
+				.addField("Yetki Güncellemesinde Hata (${message.author.username})", "Halihazırda bir Özel Üyeliğe sahip olduğun için bu komutu kullanamazsın.")
+				message.channel.send({embed: embed});
 			}
 		}
 	}
