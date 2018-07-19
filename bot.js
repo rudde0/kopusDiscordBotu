@@ -152,6 +152,7 @@ client.on('message', message => {
 		if(message.member.role.has(`428536643042017284`) {
 		   	message.delete(120);
 			OzelUyelik.delete(msg.author.id);
+		}
 	}
 	
 	if (message.content === 'vip') {
