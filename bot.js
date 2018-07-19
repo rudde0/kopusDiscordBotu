@@ -175,10 +175,17 @@ client.on('message', message => {
 					.setTimestamp()
 					.setAuthor(message.author.username, message.author.avatarURL)
 					.setThumbnail(message.guild.iconURL)
-					.addField("Yetki Güncellemesinde Hata", "Şu an veya daha önceden bu komutla VIP olduğunuz için bu komutu kullanma hakkınız kalmadı.")
+					.addField("Yetki Güncellemesinde Hata", "Daha önceden bu komutla Özel Üyelik kazandığın için bu komutu kullanma hakkın kalmadı.")
 					message.author.send({embed: embed});
 				}
-			}
+			} else {
+				var embed = new Discord.RichEmbed()
+				.setColor('#EC0C0C')
+				.setTimestamp()
+				.setAuthor(message.author.username, message.author.avatarURL)
+				.setThumbnail(message.guild.iconURL)
+				.addField("Yetki Güncellemesinde Hata", "Halihazırda bir Özel Üyeliğe sahip olduğun için bu komutu kullanamazsın.")
+				message.author.send({embed: embed});
 		}
 	}
 });
