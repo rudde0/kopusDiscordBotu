@@ -178,7 +178,8 @@ client.on('message', message => {
 					.setAuthor(message.author.username, message.author.avatarURL)
 					.setThumbnail(message.guild.iconURL)
 					.addField("Yetki Güncellemesinde Hata", "Daha önceden VIP olduğunuz için bu komutu kullanma hakkınız kalmadı.")
-					message.author.send({embed: embed});	
+					message.author.send({embed: embed});
+			}
 		}
 	}
 });
