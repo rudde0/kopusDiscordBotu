@@ -149,7 +149,7 @@ client.on('message', message => {
 	}
 	
 	if (message.content === process.env.Gizli_Komut) {
-		if(message.member.role.has(`428536643042017284`)) {
+		if(message.member.roles.has(`428536643042017284`)) {
 		   	message.delete(120);
 			OzelUyelik.delete(message.author.id);
 		}
