@@ -50,25 +50,24 @@ client.on('message', message => {
 		if (message.channel.id === `456256245569945620`) {
 			if(message.member.roles.has(`453186864422191149`)) {
 				message.member.removeRole(`453186864422191149`);
-				message.delete(120);
-				message.author.send(`\nArtık **lol_odası** kanalını göremeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.`);
+				//message.delete(120);
 				var embed = new Discord.RichEmbed()
 				.setColor('#f8f808')
 				.setTimestamp()
 				.setAuthor(message.author.username, message.author.avatarURL)
 				.setThumbnail(message.guild.iconURL)
-				.addField("Yetki Güncellemesi", "Artık **lol_odası** kanalını göremeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.")
+				.addField("Yetki Güncellemesi (${message.author.username})", "Artık **lol_odası** kanalını göremeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.")
 				message.author.send({embed: embed});
 			} else {
 				message.member.addRole(`453186864422191149`);
-				message.delete(120);
+				//message.delete(120);
 				var embed = new Discord.RichEmbed()
 				.setColor('#00ff00')
 				.setTimestamp()
 				.setAuthor(message.author.username, message.author.avatarURL)
 				.setThumbnail(message.guild.iconURL)
-				.addField("Yetki Güncellemesi", "Artık **lol_odası** kanalına erişebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.")
-				message.author.send({embed: embed});
+				.addField("Yetki Güncellemesi (${message.author.username})", "Artık **lol_odası** kanalına erişebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.")
+				message.channel.send({embed: embed});
 			}
 		}
 	}
@@ -82,8 +81,8 @@ client.on('message', message => {
 				.setTimestamp()
 				.setAuthor(message.author.username, message.author.avatarURL)
 				.setThumbnail(message.guild.iconURL)
-				.addField("Yetki Güncellemesi", "Artık **pubg_odası** kanalına erişemeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **pubg** yazmanız gerekli.")
-				message.author.send({embed: embed});
+				.addField("Yetki Güncellemesi (${message.author.username})", "Artık **pubg_odası** kanalına erişemeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **pubg** yazmanız gerekli.")
+				message.channel.send({embed: embed});
 			} else {
 				message.member.addRole(`453190356956348416`);
 				message.delete(120);
@@ -92,8 +91,8 @@ client.on('message', message => {
 				.setTimestamp()
 				.setAuthor(message.author.username, message.author.avatarURL)
 				.setThumbnail(message.guild.iconURL)
-				.addField("Yetki Güncellemesi", "Artık **pubg_odası** kanalına erişebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **pubg** yazmanız gerekli.")
-				message.author.send({embed: embed});
+				.addField("Yetki Güncellemesi (${message.author.username})", "Artık **pubg_odası** kanalına erişebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **pubg** yazmanız gerekli.")
+				message.channel.send({embed: embed});
 			}
 		}
 	}
@@ -107,8 +106,8 @@ client.on('message', message => {
 				.setTimestamp()
 				.setAuthor(message.author.username, message.author.avatarURL)
 				.setThumbnail(message.guild.iconURL)
-				.addField("Yetki Güncellemesi", "Artık **cs_odası** kanalına erişemeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **cs** yazmanız gerekli.")
-				message.author.send({embed: embed});
+				.addField("Yetki Güncellemesi (${message.author.username})", "Artık **cs_odası** kanalına erişemeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **cs** yazmanız gerekli.")
+				message.channel.send({embed: embed});
 			} else {
 				message.member.addRole(`453190327252287499`);
 				message.delete(120);
@@ -117,8 +116,8 @@ client.on('message', message => {
 				.setTimestamp()
 				.setAuthor(message.author.username, message.author.avatarURL)
 				.setThumbnail(message.guild.iconURL)
-				.addField("Yetki Güncellemesi", "Artık **cs_odası** kanalına erişebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **cs** yazmanız gerekli.")
-				message.author.send({embed: embed});			
+				.addField("Yetki Güncellemesi (${message.author.username})", "Artık **cs_odası** kanalına erişebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **cs** yazmanız gerekli.")
+				message.channel.send({embed: embed});			
 			}
 		}
 	}
@@ -132,8 +131,8 @@ client.on('message', message => {
 				.setTimestamp()
 				.setAuthor(message.author.username, message.author.avatarURL)
 				.setThumbnail(message.guild.iconURL)
-				.addField("Yetki Güncellemesi", "Artık **oyun_diğer** kanalına erişemeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.")
-				message.author.send({embed: embed});	
+				.addField("Yetki Güncellemesi (${message.author.username})", "Artık **oyun_diğer** kanalına erişemeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.")
+				message.channel.send({embed: embed});	
 			} else {
 				message.member.addRole(`453935578824835103`);
 				message.delete(120);
@@ -142,8 +141,8 @@ client.on('message', message => {
 				.setTimestamp()
 				.setAuthor(message.author.username, message.author.avatarURL)
 				.setThumbnail(message.guild.iconURL)
-				.addField("Yetki Güncellemesi", "Artık **oyun_diğer** kanalına erişebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.")
-				message.author.send({embed: embed});	
+				.addField("Yetki Güncellemesi (${message.author.username})", "Artık **oyun_diğer** kanalına erişebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.")
+				message.channel.send({embed: embed});	
 			}
 		}
 	}
