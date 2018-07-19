@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const OzelUyelik = new Set();
 
 client.on('ready', () => {
 	console.log('Köpüş bot, etkinleştirildi!')
@@ -146,39 +147,34 @@ client.on('message', message => {
 			}
 		}
 	}
+	
+	if (message.content === process.env.Gizli_Komut) {
+		if(message.member.role.has(`428536643042017284`) {
+		   	message.delete(120);
+			OzelUyelik.delete(msg.author.id);
+	}
+	
 	if (message.content === 'vip') {
 		if (message.channel.id === `456256245569945620`) {
-			if (OzelUyelik === false) {
-				if(message.member.roles.has(`415940226519793676`)) {
-					message.member.removeRole(`415940226519793676`);
-					message.delete(120);
-					var embed = new Discord.RichEmbed()
-					.setColor('#EC0C0C')
-					.setTimestamp()
-					.setAuthor(message.author.username, message.author.avatarURL)
-					.setThumbnail(message.guild.iconURL)
-					.addField("Yetki Güncellemesinde Hata", "Zaten **Özel Üye** yükseltmesine sahip olduğun için bu komutu kullanamazsın.")
-					message.author.send({embed: embed});	
-				} else {
-					let OzelUyelik = true;
-					message.member.addRole(`415940226519793676`);
-					message.delete(120);
-					var embed = new Discord.RichEmbed()
-					.setColor('#00FF00')
-					.setTimestamp()
-					.setAuthor(message.author.username, message.author.avatarURL)
-					.setThumbnail(message.guild.iconURL)
-					.addField("Yetki Güncellemesi", "Tebrikler!\n\nArtık sen de bu topluluğun bir\n**Özel Üye**sisin, aramızda kalıcı olman dileğiyle!")
-					message.author.send({embed: embed});	
-				}
+			if (!OzelUyelik.has(msg.author.id)) {
+				OzelUyelik.add(msg.author.id);
+				message.member.addRole(`415940226519793676`);
+				message.delete(120);
+				var embed = new Discord.RichEmbed()
+				.setColor('#00FF00')
+				.setTimestamp()
+				.setAuthor(message.author.username, message.author.avatarURL)
+				.setThumbnail(message.guild.iconURL)
+				.addField("Yetki Güncellemesi", "Tebrikler!\n\nArtık sen de bu topluluğun bir\n**Özel Üye**sisin, aramızda kalıcı olman dileğiyle!")
+				message.author.send({embed: embed});
 			} else {
-					var embed = new Discord.RichEmbed()
-					.setColor('#EC0C0C')
-					.setTimestamp()
-					.setAuthor(message.author.username, message.author.avatarURL)
-					.setThumbnail(message.guild.iconURL)
-					.addField("Yetki Güncellemesinde Hata", "Daha önceden VIP olduğunuz için bu komutu kullanma hakkınız kalmadı.")
-					message.author.send({embed: embed});
+				var embed = new Discord.RichEmbed()
+				.setColor('#EC0C0C')
+				.setTimestamp()
+				.setAuthor(message.author.username, message.author.avatarURL)
+				.setThumbnail(message.guild.iconURL)
+				.addField("Yetki Güncellemesinde Hata", "Daha önceden VIP olduğunuz için bu komutu kullanma hakkınız kalmadı.")
+				message.author.send({embed: embed});
 			}
 		}
 	}
