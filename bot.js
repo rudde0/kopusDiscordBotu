@@ -11,12 +11,12 @@ client.on('message', message => {
 		message.channel.send(`Sunucumuzda kullanabildiğin komutları aşağıda listeledik! :upside_down:\n\n**»** Arkadaşınla ortak video izleyebilmek için: __http://bit.ly/kopusw2gether__\n\n**»** Sunucu anlık davet bağlantısı: __http://bit.ly/kopusDC__\n\n**»** Müzik botunu kanalına çağırmak için (**VIP** üstü kullanabilir):\n__play -müzik bağlantısı veya isim-__\nDurdurmak için ise __stop__\n\n**»** Oynadığın oyunla ilgili sohbet kanalına erişim için sohbete şunu yazabilirsin:\n__lol__, __cs__, __pubg__, __diğer__\n\n**»** Sıkça sorulan sorulara bakmak için sohbete __sss__ yazabilirsin.`);
 	}
 	if (message.content === 'sss') {
-		message.channel.send(`**S:** Köpüşlerin olayı nedir, nasıl olunur?\nBurası arkadaş topluluğudur. Köpüş grubundakiler ise bu topluluktaki herkesle iletişimi olmuş, Köpüş grubuna bir şeyler katmış insanlardan oluşmaktadır. Köpüş olmak için herhangi bir şart belirlemedik. Burada uzun süre vakit geçirdikten sonra kendini Köpüşlerin arasında erişebilirsin.\n\n**S:** Köpüşlerdeki yıldızlar/aylar neyi ifade ediyor?\nAy simgesi(**☾**) o kişinin bazı sebeplerden ötürü sunucuya bir süre bakmayacağı anlamına geliyor.\nHer bir **★**, o kişinin en az iki yıldır Köpüş grubunda bulunmuş olduğunu gösteriyor. Örneğin 2 yıldızı olan bir Köpüş üyesi, 4 senedir bu topluluğun içinde anlamına gelmekte, **☆** ise her bir yılı ifade ediyor. Örneğin, bir yıldır kişi, Köpüş grubundaysa **☆** ifadesi kazanır.\nÖrneğin, **Asof** aramıza 2015 yılında katıldığı için **★☆** (3 yıl) yıldızlarına sahip.`);
+		message.channel.send(`**S:** Köpüşlerin olayı nedir, nasıl olunur?\nBurası arkadaş topluluğudur. Köpüş grubundakiler ise bu topluluktaki herkesle iletişimi olmuş, Köpüş grubuna bir şeyler katmış insanlardan oluşmaktadır. Köpüş olmak için herhangi bir şart belirlemedik. Burada uzun süre vakit geçirdikten sonra kendini Köpüşlerin arasında erişebilirsin.\n\n**S:** Köpüşlerdeki yıldızlar/aylar neyi ifade ediyor?\nAy simgesi(**☾**) o kişinin bazı sebeplerden ötürü sunucuya bir süre bakmayacağı anlamına geliyor.\nHer bir **★**, o kişinin en az iki yıldır Köpüş grubunda bulunmuş olduğunu gösteriyor. Örneğin 2 yıldızı olan bir Köpüş üyesi, 4 senedir bu topluluğun içinde anlamına gelmekte, **☆** ise her bir yılı ifade ediyor. Örneğin, bir yıldır kişi, Köpüş grubundaysa **☆** ifadesi kazanır.\nÖrneğin, **Asof** aramıza 2015 yılında katıldığı için **★☆** (3 yıl) yıldızlarına sahip.\n\n**S**: VIP nasıl olurum?\nVIP için herhangi bir ücret veya başka bir şey talep etmiyoruz. VIP olmak istiyorsan sohbete __vip__ yazman yeterli. Herhangi bir kural ihlalinde VIP yetkin elinden alınır ve tekrar VIP yetkisine erişemezsin.`);
 	}
 	if (message.content === 'ikimesajbirlestirkopusbot') {
 		if(message.member.roles.has(`407204500018036737`)) {
 			message.delete(120);
-			message.channel.send(`Sunucumuzda kullanabildiğin komutları aşağıda listeledik! :upside_down:\n\n**»** Arkadaşınla ortak video izleyebilmek için: __http://bit.ly/kopusw2gether__\n\n**»** Sunucu anlık davet bağlantısı: __http://bit.ly/kopusDC__\n\n**»** Müzik botunu kanalına çağırmak için (**VIP** üstü kullanabilir):\n__play -müzik bağlantısı veya isim-__\nDurdurmak için ise __stop__\n\n**»** Oynadığın oyunla ilgili sohbet kanalına erişim için sohbete şunu yazabilirsin:\n__lol__, __cs__, __pubg__, __diğer__\n\n**»** Sıkça sorulan sorulara bakmak için sohbete __sss__ yazabilirsin.\n\n**S:** Köpüşlerin olayı nedir, nasıl olunur?\nBurası arkadaş topluluğudur. Köpüş grubundakiler ise bu topluluktaki herkesle iletişimi olmuş, Köpüş grubuna bir şeyler katmış insanlardan oluşmaktadır. Köpüş olmak için herhangi bir şart belirlemedik. Burada uzun süre vakit geçirdikten sonra kendini Köpüşlerin arasında erişebilirsin.\n\n**S:** Köpüşlerdeki yıldızlar/aylar neyi ifade ediyor?\nAy simgesi(**☾**) o kişinin bazı sebeplerden ötürü sunucuya bir süre bakmayacağı anlamına geliyor.\nHer bir **★**, o kişinin en az iki yıldır Köpüş grubunda bulunmuş olduğunu gösteriyor. Örneğin 2 yıldızı olan bir Köpüş üyesi, 4 senedir bu topluluğun içinde anlamına gelmekte, **☆** ise her bir yılı ifade ediyor. Örneğin, bir yıldır kişi, Köpüş grubundaysa **☆** ifadesi kazanır.\nÖrneğin, **Asof** aramıza 2015 yılında katıldığı için **★☆** (3 yıl) yıldızlarına sahip.`);
+			message.channel.send(`Sunucumuzda kullanabildiğin komutları aşağıda listeledik! :upside_down:\n\n**»** Arkadaşınla ortak video izleyebilmek için: __http://bit.ly/kopusw2gether__\n\n**»** Sunucu anlık davet bağlantısı: __http://bit.ly/kopusDC__\n\n**»** Müzik botunu kanalına çağırmak için (**VIP** üstü kullanabilir):\n__play -müzik bağlantısı veya isim-__\nDurdurmak için ise __stop__\n\n**»** Oynadığın oyunla ilgili sohbet kanalına erişim için sohbete şunu yazabilirsin:\n__lol__, __cs__, __pubg__, __diğer__\n\n**»** Sıkça sorulan sorulara bakmak için sohbete __sss__ yazabilirsin.\n\n**S:** Köpüşlerin olayı nedir, nasıl olunur?\nBurası arkadaş topluluğudur. Köpüş grubundakiler ise bu topluluktaki herkesle iletişimi olmuş, Köpüş grubuna bir şeyler katmış insanlardan oluşmaktadır. Köpüş olmak için herhangi bir şart belirlemedik. Burada uzun süre vakit geçirdikten sonra kendini Köpüşlerin arasında erişebilirsin.\n\n**S:** Köpüşlerdeki yıldızlar/aylar neyi ifade ediyor?\nAy simgesi(**☾**) o kişinin bazı sebeplerden ötürü sunucuya bir süre bakmayacağı anlamına geliyor.\nHer bir **★**, o kişinin en az iki yıldır Köpüş grubunda bulunmuş olduğunu gösteriyor. Örneğin 2 yıldızı olan bir Köpüş üyesi, 4 senedir bu topluluğun içinde anlamına gelmekte, **☆** ise her bir yılı ifade ediyor. Örneğin, bir yıldır kişi, Köpüş grubundaysa **☆** ifadesi kazanır.\nÖrneğin, **Asof** aramıza 2015 yılında katıldığı için **★☆** (3 yıl) yıldızlarına sahip.\n\n**S**: VIP nasıl olurum?\nVIP için herhangi bir ücret veya başka bir şey talep etmiyoruz. VIP olmak istiyorsan sohbete __vip__ yazman yeterli. Herhangi bir kural ihlalinde VIP yetkin elinden alınır ve tekrar VIP yetkisine erişemezsin.`);
 		} else {
 			message.delete(120);
 			var embed = new Discord.RichEmbed()
@@ -137,13 +137,48 @@ client.on('message', message => {
 				message.member.addRole(`453935578824835103`);
 				message.delete(120);
 				var embed = new Discord.RichEmbed()
-				.setColor('#EC0C0C')
+				.setColor('#00FF00')
 				.setTimestamp()
 				.setAuthor(message.author.username, message.author.avatarURL)
 				.setThumbnail(message.guild.iconURL)
 				.addField("Yetki Güncellemesi", "Artık **oyun_diğer** kanalına erişebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.")
 				message.author.send({embed: embed});	
 			}
+		}
+	}
+	if (message.content === 'vip') {
+		if (message.channel.id === `456256245569945620`) {
+			if (OzelUyelik === false) {
+				if(message.member.roles.has(`415940226519793676`)) {
+					message.member.removeRole(`415940226519793676`);
+					message.delete(120);
+					var embed = new Discord.RichEmbed()
+					.setColor('#EC0C0C')
+					.setTimestamp()
+					.setAuthor(message.author.username, message.author.avatarURL)
+					.setThumbnail(message.guild.iconURL)
+					.addField("Yetki Güncellemesinde Hata", "Zaten **Özel Üye** yükseltmesine sahip olduğun için bu komutu kullanamazsın.")
+					message.author.send({embed: embed});	
+				} else {
+					let OzelUyelik = true;
+					message.member.addRole(`415940226519793676`);
+					message.delete(120);
+					var embed = new Discord.RichEmbed()
+					.setColor('#00FF00')
+					.setTimestamp()
+					.setAuthor(message.author.username, message.author.avatarURL)
+					.setThumbnail(message.guild.iconURL)
+					.addField("Yetki Güncellemesi", "Tebrikler!\n\nArtık sen de bu topluluğun bir\n**Özel Üye**sisin, aramızda kalıcı olman dileğiyle!")
+					message.author.send({embed: embed});	
+				}
+			} else {
+					var embed = new Discord.RichEmbed()
+					.setColor('#EC0C0C')
+					.setTimestamp()
+					.setAuthor(message.author.username, message.author.avatarURL)
+					.setThumbnail(message.guild.iconURL)
+					.addField("Yetki Güncellemesinde Hata", "Daha önceden VIP olduğunuz için bu komutu kullanma hakkınız kalmadı.")
+					message.author.send({embed: embed});	
 		}
 	}
 });
