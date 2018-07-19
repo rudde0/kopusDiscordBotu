@@ -56,7 +56,7 @@ client.on('message', message => {
 				.setTimestamp()
 				.setAuthor(message.author.username, message.author.avatarURL)
 				.setThumbnail(message.guild.iconURL)
-				.addField("Yetki Güncellemesi (${message.author.username})", "Artık **lol_odası** kanalını göremeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.")
+				.addField("Yetki Güncellemesi", "Artık **lol_odası** kanalını göremeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.")
 				message.author.send({embed: embed});
 			} else {
 				message.member.addRole(`453186864422191149`);
@@ -66,7 +66,7 @@ client.on('message', message => {
 				.setTimestamp()
 				.setAuthor(message.author.username, message.author.avatarURL)
 				.setThumbnail(message.guild.iconURL)
-				.addField("Yetki Güncellemesi (${message.author.username})", "Artık **lol_odası** kanalına erişebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.")
+				.addField("Yetki Güncellemesi", "Artık **lol_odası** kanalına erişebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.")
 				message.channel.send({embed: embed});
 			}
 		}
@@ -81,7 +81,7 @@ client.on('message', message => {
 				.setTimestamp()
 				.setAuthor(message.author.username, message.author.avatarURL)
 				.setThumbnail(message.guild.iconURL)
-				.addField("Yetki Güncellemesi (${message.author.username})", "Artık **pubg_odası** kanalına erişemeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **pubg** yazmanız gerekli.")
+				.addField("Yetki Güncellemesi", "Artık **pubg_odası** kanalına erişemeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **pubg** yazmanız gerekli.")
 				message.channel.send({embed: embed});
 			} else {
 				message.member.addRole(`453190356956348416`);
@@ -91,7 +91,7 @@ client.on('message', message => {
 				.setTimestamp()
 				.setAuthor(message.author.username, message.author.avatarURL)
 				.setThumbnail(message.guild.iconURL)
-				.addField("Yetki Güncellemesi (${message.author.username})", "Artık **pubg_odası** kanalına erişebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **pubg** yazmanız gerekli.")
+				.addField("Yetki Güncellemesi", "Artık **pubg_odası** kanalına erişebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **pubg** yazmanız gerekli.")
 				message.channel.send({embed: embed});
 			}
 		}
@@ -106,7 +106,7 @@ client.on('message', message => {
 				.setTimestamp()
 				.setAuthor(message.author.username, message.author.avatarURL)
 				.setThumbnail(message.guild.iconURL)
-				.addField("Yetki Güncellemesi (${message.author.username})", "Artık **cs_odası** kanalına erişemeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **cs** yazmanız gerekli.")
+				.addField("Yetki Güncellemesi", "Artık **cs_odası** kanalına erişemeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **cs** yazmanız gerekli.")
 				message.channel.send({embed: embed});
 			} else {
 				message.member.addRole(`453190327252287499`);
@@ -116,7 +116,7 @@ client.on('message', message => {
 				.setTimestamp()
 				.setAuthor(message.author.username, message.author.avatarURL)
 				.setThumbnail(message.guild.iconURL)
-				.addField("Yetki Güncellemesi (${message.author.username})", "Artık **cs_odası** kanalına erişebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **cs** yazmanız gerekli.")
+				.addField("Yetki Güncellemesi", "Artık **cs_odası** kanalına erişebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **cs** yazmanız gerekli.")
 				message.channel.send({embed: embed});			
 			}
 		}
@@ -131,7 +131,7 @@ client.on('message', message => {
 				.setTimestamp()
 				.setAuthor(message.author.username, message.author.avatarURL)
 				.setThumbnail(message.guild.iconURL)
-				.addField("Yetki Güncellemesi (${message.author.username})", "Artık **oyun_diğer** kanalına erişemeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.")
+				.addField("Yetki Güncellemesi", "Artık **oyun_diğer** kanalına erişemeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.")
 				message.channel.send({embed: embed});	
 			} else {
 				message.member.addRole(`453935578824835103`);
@@ -141,7 +141,7 @@ client.on('message', message => {
 				.setTimestamp()
 				.setAuthor(message.author.username, message.author.avatarURL)
 				.setThumbnail(message.guild.iconURL)
-				.addField("Yetki Güncellemesi (${message.author.username})", "Artık **oyun_diğer** kanalına erişebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.")
+				.addField("Yetki Güncellemesi", "Artık **oyun_diğer** kanalına erişebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **diğer** yazmanız gerekli.")
 				message.channel.send({embed: embed});	
 			}
 		}
@@ -175,7 +175,7 @@ client.on('message', message => {
 					.setTimestamp()
 					.setAuthor(message.author.username, message.author.avatarURL)
 					.setThumbnail(message.guild.iconURL)
-					.addField("Yetki Güncellemesinde Hata (${message.author.username})", "Daha önceden bu komutla Özel Üyelik kazandığın için bu komutu kullanma hakkın kalmadı.")
+					.addField("Yetki Güncellemesinde Hata", "Daha önceden bu komutla Özel Üyelik kazandığın için bu komutu kullanma hakkın kalmadı.")
 					message.channel.send({embed: embed});
 				}
 			} else {
@@ -185,7 +185,7 @@ client.on('message', message => {
 				.setTimestamp()
 				.setAuthor(message.author.username, message.author.avatarURL)
 				.setThumbnail(message.guild.iconURL)
-				.addField("Yetki Güncellemesinde Hata (${message.author.username})", "Halihazırda bir Özel Üyeliğe sahip olduğun için bu komutu kullanamazsın.")
+				.addField("Yetki Güncellemesinde Hata", "Halihazırda bir Özel Üyeliğe sahip olduğun için bu komutu kullanamazsın.")
 				message.channel.send({embed: embed});
 			}
 		}
