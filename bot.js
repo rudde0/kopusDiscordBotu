@@ -170,6 +170,7 @@ client.on('message', message => {
 					.addField("Yetki Güncellemesi", "Tebrikler!\n\nArtık sen de bu topluluğun bir Özel Üyesisin.\n\nAramızda kalıcı olman dileğiyle!")
 					message.author.send({embed: embed});
 				} else {
+					message.delete(120);
 					var embed = new Discord.RichEmbed()
 					.setColor('#EC0C0C')
 					.setTimestamp()
@@ -179,6 +180,7 @@ client.on('message', message => {
 					message.author.send({embed: embed});
 				}
 			} else {
+				message.delete(120);
 				var embed = new Discord.RichEmbed()
 				.setColor('#EC0C0C')
 				.setTimestamp()
