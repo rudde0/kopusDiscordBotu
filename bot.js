@@ -151,14 +151,14 @@ client.on('message', message => {
 	if (message.content === process.env.Gizli_Komut) {
 		if(message.member.role.has(`428536643042017284`)) {
 		   	message.delete(120);
-			OzelUyelik.delete(msg.author.id);
+			OzelUyelik.delete(message.author.id);
 		}
 	}
 	
 	if (message.content === 'vip') {
 		if (message.channel.id === `456256245569945620`) {
-			if (!OzelUyelik.has(msg.author.id)) {
-				OzelUyelik.add(msg.author.id);
+			if (!OzelUyelik.has(message.author.id)) {
+				OzelUyelik.add(message.author.id);
 				message.member.addRole(`415940226519793676`);
 				message.delete(120);
 				var embed = new Discord.RichEmbed()
