@@ -186,6 +186,7 @@ client.on('message', message => {
 				.setThumbnail(message.guild.iconURL)
 				.addField("Yetki Güncellemesinde Hata", "Halihazırda bir Özel Üyeliğe sahip olduğun için bu komutu kullanamazsın.")
 				message.author.send({embed: embed});
+			}
 		}
 	}
 });
