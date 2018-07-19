@@ -166,7 +166,7 @@ client.on('message', message => {
 					.setTimestamp()
 					.setAuthor(message.author.username, message.author.avatarURL)
 					.setThumbnail(message.guild.iconURL)
-					.addField("Yetki Güncellemesi (${message.author.username})", "Tebrikler!\n\nArtık sen de bu topluluğun bir Özel Üyesisin.\n\nAramızda kalıcı olman dileğiyle!")
+					.addField("Yetki Güncellemesi", "Tebrikler!\nArtık sen de bu topluluğun bir özel üyesisin.")
 					message.channel.send({embed: embed});
 				} else {
 					//message.delete(120);
@@ -175,7 +175,7 @@ client.on('message', message => {
 					.setTimestamp()
 					.setAuthor(message.author.username, message.author.avatarURL)
 					.setThumbnail(message.guild.iconURL)
-					.addField("Yetki Güncellemesinde Hata", "Daha önceden bu komutla Özel Üyelik kazandığın için bu komutu kullanma hakkın kalmadı.")
+					.addField("Yetki Güncellemesinde Hata", "Daha önceden bu komutla VIP olduğun için bu komutu kullanma hakkın kalmadı.")
 					message.channel.send({embed: embed});
 				}
 			} else {
