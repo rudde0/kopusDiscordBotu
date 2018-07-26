@@ -19,7 +19,7 @@ client.on('message', message => {
 		var embed = new Discord.RichEmbed()
 		.setColor('#00FF00')
 		.setTimestamp()
-		.setAuthor(message.author.username, message.author.avatarURL)
+		.setAuthor("Köpüş Bot", message.guild.iconURL)
 		.setThumbnail(message.guild.iconURL)
 		.addField("Yeni Özellik!", "Oyuncu sohbet odaları güncellendi! Hangi oyunu oynuyorsan sohbete onu yaz:\n\n**pubg, cs, lol, minecraft, diğer**")
 		message.channel.send({embed: embed});
