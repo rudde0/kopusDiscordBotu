@@ -14,7 +14,7 @@ client.on('message', message => {
 	if (message.content === 'sss') {
 		message.channel.send(`**S:** Köpüşlerin olayı nedir, nasıl olunur?\nBurası arkadaş topluluğudur. Köpüş grubundakiler ise bu topluluktaki herkesle iletişimi olmuş, Köpüş grubuna bir şeyler katmış insanlardan oluşmaktadır. Köpüş olmak için herhangi bir şart belirlemedik. Burada uzun süre vakit geçirdikten sonra kendini Köpüşlerin arasında erişebilirsin.\n\n**S:** Köpüşlerdeki yıldızlar/aylar neyi ifade ediyor?\nAy simgesi(**☾**) o kişinin bazı sebeplerden ötürü sunucuya bir süre bakmayacağı anlamına geliyor.\nHer bir **★**, o kişinin en az iki yıldır Köpüş grubunda bulunmuş olduğunu gösteriyor. Örneğin 2 yıldızı olan bir Köpüş üyesi, 4 senedir bu topluluğun içinde anlamına gelmekte, **☆** ise her bir yılı ifade ediyor. Örneğin, bir yıldır kişi, Köpüş grubundaysa **☆** ifadesi kazanır.\nÖrneğin, **Asof** aramıza 2015 yılında katıldığı için **★☆** (3 yıl) yıldızlarına sahip.\n\n**S**: VIP nasıl olurum?\nVIP için herhangi bir ücret veya başka bir şey talep etmiyoruz. VIP olmak istiyorsan sohbete __vip__ yazman yeterli. Herhangi bir kural ihlalinde VIP yetkin elinden alınır ve tekrar VIP yetkisine erişemezsin.`);
 	}
-	if (message.content === 'dsa') {
+	/*if (message.content === 'dsa') {
 		message.delete(120);
 		var embed = new Discord.RichEmbed()
 		.setColor('#00FF00')
@@ -23,7 +23,7 @@ client.on('message', message => {
 		.setThumbnail(message.guild.iconURL)
 		.addField("Yeni Özellik!", "Oyuncu sohbet odaları güncellendi! Hangi oyunu oynuyorsan sohbete onu yaz:\n\n**pubg, cs, lol, minecraft, diğer**")
 		message.channel.send({embed: embed});
-	}
+	}*/
 	if (message.content === 'ikimesajbirlestirkopusbot') {
 		if(message.member.roles.has(`407204500018036737`)) {
 			message.delete(120);
