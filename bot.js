@@ -26,6 +26,18 @@ client.on('message', message => {
 			message.channel.send({embed: embed});
 		}
 	}
+	if (message.content === 'ceku') {
+		if(message.member.roles.has(`407204500018036737`)) {
+			message.delete(120);
+			var embed = new Discord.RichEmbed()
+			.setColor('#00FF00')
+			.setTimestamp()
+			.setAuthor("Köpüş Bot", message.guild.iconURL)
+			.setThumbnail(message.guild.iconURL)
+			.addField(".", "sikimi ye ceyhun")
+			message.channel.send({embed: embed});
+		}
+	}
 	if (message.content === 'ikimesajbirlestirkopusbot') {
 		if(message.member.roles.has(`407204500018036737`)) {
 			message.delete(120);
