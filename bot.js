@@ -41,7 +41,7 @@ client.on('message', message => {
 			message.author.send({embed: embed});
 		}
 	}
-	if (command === "takımekle 1") {
+	if (message.content === "takımekle 1") {
 		if(!message.member.roles.has(`407204500018036737`)) return message.reply(`Bu komutu kullanabilmek için iznin yok.`);
 		const args = message.content.slice(prefix.length).trim().split(/ +/g);
 		const command = args.shift().toLowerCase();
@@ -58,8 +58,10 @@ client.on('message', message => {
 		uye5.addRole(`538075640755126284`);
 		message.reply(`${uye1}, ${uye2}, ${uye3}, ${uye4}, ${uye5} birinci takıma eklendiler!`);
 	}
-	if (command === "takımçıkar 1") {
+	if (message.content === "takımçıkar 1") {
 		if(!message.member.roles.has(`407204500018036737`)) return message.reply(`Bu komutu kullanabilmek için iznin yok.`);
+		const args = message.content.slice(prefix.length).trim().split(/ +/g);
+		const command = args.shift().toLowerCase();
 		let uye1 = args[0];
 		let uye2 = args[1];
 		let uye3 = args[2];
@@ -73,8 +75,10 @@ client.on('message', message => {
 		uye5.removeRole(`538075640755126284`);
 		message.reply(`${uye1}, ${uye2}, ${uye3}, ${uye4}, ${uye5} birinci takımdan çıkarıldılar!`);
 	}
-	if (command === "takımekle 2") {
+	if (message.content === "takımekle 2") {
 		if(!message.member.roles.has(`407204500018036737`)) return message.reply(`Bu komutu kullanabilmek için iznin yok.`);
+		const args = message.content.slice(prefix.length).trim().split(/ +/g);
+		const command = args.shift().toLowerCase();
 		let uye1 = args[0];
 		let uye2 = args[1];
 		let uye3 = args[2];
@@ -88,8 +92,10 @@ client.on('message', message => {
 		uye5.addRole(`538075651211657238`);
 		message.reply(`${uye1}, ${uye2}, ${uye3}, ${uye4}, ${uye5} ikinci takıma eklendiler!`);
 	}
-	if (command === "takımçıkar 2") {
+	if (message.content === "takımçıkar 2") {
 		if(!message.member.roles.has(`407204500018036737`)) return message.reply(`Bu komutu kullanabilmek için iznin yok.`);
+		const args = message.content.slice(prefix.length).trim().split(/ +/g);
+		const command = args.shift().toLowerCase();
 		let uye1 = args[0];
 		let uye2 = args[1];
 		let uye3 = args[2];
