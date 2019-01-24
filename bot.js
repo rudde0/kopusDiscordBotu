@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const OzelUyelik = new Set();
+const args = message.content.slice(prefix.length).trim().split(/ +/g);
+const command = args.shift().toLowerCase();
 
 client.on('ready', () => {
 	console.log('Köpüş bot, etkinleştirildi!')
@@ -40,6 +42,66 @@ client.on('message', message => {
 			.addField("Bir hata meydana geldi", "Sunucuda kullanmaya çalıştığın komuta maalesef sadece Topluluk Yöneticileri erişebiliyor.")
 			message.author.send({embed: embed});
 		}
+	}
+	if (command === "takımekle 1") {
+		if(!message.member.roles.has(`407204500018036737`)) return message.reply(`Bu komutu kullanabilmek için iznin yok.`);
+		let uye1 = args[0];
+		let uye2 = args[1];
+		let uye3 = args[2];
+		let uye4 = args[3];
+		let uye5 = args[4];
+		let location = args[2];
+		uye1.addRole(`538075640755126284`);
+		uye2.addRole(`538075640755126284`);
+		uye3.addRole(`538075640755126284`);
+		ye4.addRole(`538075640755126284`);
+		uye5.addRole(`538075640755126284`);
+		message.reply(`${uye1}, ${uye2}, ${uye3}, ${uye4}, ${uye5} birinci takıma eklendiler!`);
+	}
+	if (command === "takımçıkar 1") {
+		if(!message.member.roles.has(`407204500018036737`)) return message.reply(`Bu komutu kullanabilmek için iznin yok.`);
+		let uye1 = args[0];
+		let uye2 = args[1];
+		let uye3 = args[2];
+		let uye4 = args[3];
+		let uye5 = args[4];
+		let location = args[2];
+		uye1.removeRole(`538075640755126284`);
+		uye2.removeRole(`538075640755126284`);
+		uye3.removeRole(`538075640755126284`);
+		uye4.removeRole(`538075640755126284`);
+		uye5.removeRole(`538075640755126284`);
+		message.reply(`${uye1}, ${uye2}, ${uye3}, ${uye4}, ${uye5} birinci takımdan çıkarıldılar!`);
+	}
+	if (command === "takımekle 2") {
+		if(!message.member.roles.has(`407204500018036737`)) return message.reply(`Bu komutu kullanabilmek için iznin yok.`);
+		let uye1 = args[0];
+		let uye2 = args[1];
+		let uye3 = args[2];
+		let uye4 = args[3];
+		let uye5 = args[4];
+		let location = args[2];
+		uye1.addRole(`538075651211657238`);
+		uye2.addRole(`538075651211657238`);
+		uye3.addRole(`538075651211657238`);
+		uye4.addRole(`538075651211657238`);
+		uye5.addRole(`538075651211657238`);
+		message.reply(`${uye1}, ${uye2}, ${uye3}, ${uye4}, ${uye5} ikinci takıma eklendiler!`);
+	}
+	if (command === "takımçıkar 2") {
+		if(!message.member.roles.has(`407204500018036737`)) return message.reply(`Bu komutu kullanabilmek için iznin yok.`);
+		let uye1 = args[0];
+		let uye2 = args[1];
+		let uye3 = args[2];
+		let uye4 = args[3];
+		let uye5 = args[4];
+		let location = args[2];
+		uye1.removeRole(`538075651211657238`);
+		uye2.removeRole(`538075651211657238`);
+		uye3.removeRole(`538075651211657238`);
+		uye4.removeRole(`538075651211657238`);
+		uye5.removeRole(`538075651211657238`);
+		message.reply(`${uye1}, ${uye2}, ${uye3}, ${uye4}, ${uye5} ikinci takımdan çıkarıldılar!`);
 	}
 	if (message.content === 'köpüş') {
 		if (message.channel.id === `428540697419972609`) {
