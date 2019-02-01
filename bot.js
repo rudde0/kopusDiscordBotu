@@ -4,7 +4,8 @@ const OzelUyelik = new Set();
 
 client.on('ready', () => {
 	console.log('Köpüş bot, etkinleştirildi!')
-	client.user.setPresence({ game: { name: 'discord.me/kopus', type: 0 } });
+	//client.user.setPresence({ game: { name: 'discord.me/kopus', type: 0 } });
+	client.user.setPresence({ activity: { name: 'Davet: discord.gg/Psurenb' }, status: 'online' });
 });
 
 client.on('message', message => {
