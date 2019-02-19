@@ -121,6 +121,31 @@ client.on('message', message => {
 			message.author.send({embed: embed});
 		}
 	}
+	if (message.content === 'bilgisayargelişimi' || message.content === 'bilgisayargelisimi') {
+		if (message.channel.id === `547372237586432001`) {
+			if(message.member.roles.has(`547372237586432001`)) {
+				message.member.removeRole(`547372237586432001`);
+				//message.delete(120);
+				var embed = new Discord.RichEmbed()
+				.setColor('#f8f808')
+				.setTimestamp()
+				.setAuthor(message.author.username, message.author.avatarURL)
+				.setThumbnail(message.guild.iconURL)
+				.addField("Yetki Güncellemesi", "Artık **bilgisayar_gelişimi** kanalını göremeyeceksin. Görebilmek için tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.")
+				message.author.send({embed: embed});
+			} else {
+				message.member.addRole(`547372237586432001`);
+				//message.delete(120);
+				var embed = new Discord.RichEmbed()
+				.setColor('#00ff00')
+				.setTimestamp()
+				.setAuthor(message.author.username, message.author.avatarURL)
+				.setThumbnail(message.guild.iconURL)
+				.addField("Yetki Güncellemesi", "Artık **bilgisayar_gelişimi** kanalına erişebilirsin. Eğer kanalı görmek istemezsen tekrar **bot_kanalları** odasına **lol** yazmanız gerekli.")
+				message.channel.send({embed: embed});
+			}
+		}
+	}
 	if (message.content === 'lol') {
 		if (message.channel.id === `456256245569945620`) {
 			if(message.member.roles.has(`453186864422191149`)) {
