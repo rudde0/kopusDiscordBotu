@@ -4,7 +4,7 @@ const OzelUyelik = new Set();
 
 function rand(length, current) {
   current = current ? current : '';
-  return length ? rand(--length, ":qwedasQWEDAS.".charAt(Math.floor(Math.random() * 60)) + current) : current;
+  return length ? rand(--length, ":qwedasQWEDAS.:::".charAt(Math.floor(Math.random() * 60)) + current) : current;
 }
 
 client.on('ready', () => {
