@@ -2,9 +2,19 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const OzelUyelik = new Set();
 
-function rand(length, current) {
+/*function rand(length, current) {
   current = current ? current : '';
   return length ? rand(--length, ":qwedasQWEDAS.:::".charAt(Math.floor(Math.random() * 14 + 1))) : current;
+}*/
+
+function rand(length) {
+	var result           = '';
+	var characters       = ':qwedasQWEDAS.:::';
+	var charactersLength = characters.length;
+	for ( var i = 0; i < length; i++ ) {
+		result += characters.charAt(Math.floor(Math.random() * charactersLength));
+	}
+	return result;
 }
 
 client.on('ready', () => {
