@@ -12,7 +12,7 @@ client.on('ready', () => {
 	//client.user.setPresence({ game: { name: 'discord.me/kopus', type: 0 } });
 	//client.user.setPresence({ activity: { name: 'Davet: discord.gg/Psurenb' }, status: 'online' });
 	client.setInterval(() => {
-		client.user.setNickname(Math.floor(Math.random() * 10) + 1)
+		client.setNickname(Math.floor(Math.random() * 10) + 1)
     }, 60);
 });
 
