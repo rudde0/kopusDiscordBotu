@@ -20,7 +20,7 @@ function rand(length) {
 client.on('ready', () => {
 	console.log('Köpüş bot, etkinleştirildi!')
 	//client.user.setPresence({ game: { name: 'fight club', type: 0 } });
-	client.user.setPresence({ activity: { name: 'fight club' }, status: 'WATCHING' });
+	client.user.setPresence({ activity: { name: 'fight club' }, type: 4 }); // status: 'WATCHING' });
 	client.setInterval(() => {
 		//client.setNickname(Math.floor(Math.random() * 10) + 1)
 		client.guilds.find(guild => guild.id === '222055135071698944').me.setNickname(rand(Math.random() * 10 + 5)); //rand(Math.floor(Math.random() * 10) + 1)
