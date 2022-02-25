@@ -2,10 +2,18 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const OzelUyelik = new Set();
 
+function rand(length, current) {
+  current = current ? current : '';
+  return length ? rand(--length, ":qwedasQWEDAS.".charAt(Math.floor(Math.random() * 60)) + current) : current;
+}
+
 client.on('ready', () => {
 	console.log('Köpüş bot, etkinleştirildi!')
 	//client.user.setPresence({ game: { name: 'discord.me/kopus', type: 0 } });
-	client.user.setPresence({ activity: { name: 'Davet: discord.gg/Psurenb' }, status: 'online' });
+	//client.user.setPresence({ activity: { name: 'Davet: discord.gg/Psurenb' }, status: 'online' });
+	client.setInterval(() => {
+		client.user.setNickname(Math.floor(Math.random() * 10) + 1)
+    }, 60);
 });
 
 client.on('message', message => {
@@ -25,7 +33,7 @@ client.on('message', message => {
 			.setTimestamp()
 			.setAuthor("Köpüş Bot", message.guild.iconURL)
 			.setThumbnail(message.guild.iconURL)
-			.addField("Yeni Sunucu!", "Yakın gelecekte açılacak olan **PROJECT: SURVIVAL** Minecraft sunucumuzun kategorisine erişmek için sohbete şunu yazabilirsin:\n\n**mcsurvival**")
+			.addField("PROJECTS", "**Projects** Minecraft sunucumuzun kategorisine erişmek için sohbete şunu yazabilirsin:\n\n**mcsurvival**")
 			message.channel.send({embed: embed});
 		}
 	}
