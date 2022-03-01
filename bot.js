@@ -30,7 +30,7 @@ client.on('ready', () => {
 	client.setInterval(() => {
 		//client.setNickname(Math.floor(Math.random() * 10) + 1)
 		client.guilds.find(guild => guild.id === '222055135071698944').me.setNickname(rand(Math.random() * 10 + 5)); //rand(Math.floor(Math.random() * 10) + 1)
-	}, 6000);
+	}, 12000);
 });
 
 client.on('message', message => {
